@@ -7,7 +7,11 @@ Hazardous waste facilities are regulated sites that are allowed to produce, trea
 The environmental justice (EJ) movement rose in the 1970s from the group of residents in Warren County, North Carolina [who fought against the disposal of polychlorinated biphenyls (PCBs) in their community](https://www.ucc.org/what-we-do/justice-local-church-ministries/justice/faithful-action-ministries/environmental-justice/a_movement_is_born_environmental_justice_and_the_ucc/
 ). This was one of the first prominent examples highlighting the disproportionate exposure to hazardous waste low-income communities of color face throughout the country. This fight also led to the seminal report by the United Church of Christ’s Commission for Racial Justice titled [*Toxic Wastes and Race in the United States*]( https://new.uccfiles.com/pdf/ToxicWastes&Race.pdf).  This report, and other subsequent studies, have found that low-income communities and communities of color are more likely to live close to high-polluting industries, hazardous waste facilities, and incinerators. 
 
-![Map of race and facilities](https://gluesolutions.github.io/map1.html)
+```html
+{! extras/gluesolutions.github.io_map1.html !}
+```
+
+<!-- ![Map of race and facilities](https://gluesolutions.github.io/map1.html) -->
 
 # What is environmental racism?
 

@@ -43,7 +43,7 @@ JINJA_FILTERS = bulrush.FILTERS
 DISPLAY_PAGES_ON_MENU = True
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['assets']
+PLUGINS = ['assets', 'mdx-include']
 
 GITHUB_URL = 'https://github.com/nesanders/cawastemap'
 # Turn off category pages - see https://stackoverflow.com/a/31884167
