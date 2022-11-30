@@ -64,3 +64,10 @@ PAGINATED_TEMPLATES = {
     'author': None
 }
 
+STATIC_PATHS = [
+    'images',
+    'extras',
+]
+EXTRA_PATH_METADATA = {
+    'extras/favicon.ico': {'path': 'favicon.ico'}
+}
