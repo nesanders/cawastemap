@@ -2,7 +2,7 @@ import bulrush
 
 AUTHOR = 'Idalmis Vaquero'
 SITENAME = 'The California Map of Hazardous Waste Sites and Schools'
-SITEURL = ''
+SITEURL = 'https://nesanders.github.io/cawastemap'
 
 PATH = 'content'
 
@@ -32,7 +32,7 @@ SOCIAL = ()
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 OUTPUT_PATH = 'docs/'
  
@@ -48,3 +48,8 @@ PLUGINS = ['assets']
 GITHUB_URL = 'https://github.com/nesanders/cawastemap'
 # Turn off category pages - see https://stackoverflow.com/a/31884167
 CATEGORY_SAVE_AS = ''
+
+# Don't make an authors page
+AUTHOR_SAVE_AS = ''
+# Don't make a tags page
+TAG_SAVE_AS = ''

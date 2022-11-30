@@ -1,6 +1,4 @@
 Title: Maps
-Date: 2022-11-29 22:57
-Modified: 2022-11-29 22:57
 
 # What are hazardous waste facilities? What are the health impacts? 
 
