@@ -53,3 +53,11 @@ CATEGORY_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 # Don't make a tags page
 TAG_SAVE_AS = ''
+
+PAGINATED_TEMPLATES = {
+    'index': None, 
+    'tag': None, 
+    'category': None, 
+    'author': None
+}
+

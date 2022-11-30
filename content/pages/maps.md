@@ -4,7 +4,8 @@ Title: Maps
 
 Hazardous waste facilities are regulated sites that are allowed to produce, treat, store, and dispose hazardous waste. In addition to the over 100 permitted sites throughout California, there are also hundreds of sites throughout the State that are undergoing cleanup, investigation, or enforcement for known or suspected contamination issues. These facilities and sites expose communities to a variety of chemicals that can increase the likelihood of cancer, respiratory diseases, neurological, reproductive, and developmental problems. 
 
-The environmental justice (EJ) movement rose in the 1970s from the group of residents in Warren County, North Carolina who fought against the disposal of polychlorinated biphenyls (PCBs) in their community. This was one of the first prominent examples highlighting the disproportionate exposure to hazardous waste low-income communities of color face throughout the country. This fight also led to the seminal report by the United Church of Christ’s Commission for Racial Justice titled Toxic Wastes and Race in the United States.  This report, and other subsequent studies, have found that low-income communities and communities of color are more likely to live close to high-polluting industries, hazardous waste facilities, and incinerators. 
+The environmental justice (EJ) movement rose in the 1970s from the group of residents in Warren County, North Carolina [who fought against the disposal of polychlorinated biphenyls (PCBs) in their community](https://www.ucc.org/what-we-do/justice-local-church-ministries/justice/faithful-action-ministries/environmental-justice/a_movement_is_born_environmental_justice_and_the_ucc/
+). This was one of the first prominent examples highlighting the disproportionate exposure to hazardous waste low-income communities of color face throughout the country. This fight also led to the seminal report by the United Church of Christ’s Commission for Racial Justice titled [*Toxic Wastes and Race in the United States*]( https://new.uccfiles.com/pdf/ToxicWastes&Race.pdf).  This report, and other subsequent studies, have found that low-income communities and communities of color are more likely to live close to high-polluting industries, hazardous waste facilities, and incinerators. 
 
 ![Map of race and facilities](https://gluesolutions.github.io/map1.html)
 
@@ -39,11 +40,6 @@ There are certain policies school districts in California must consider when dec
 
 ![Map of ¼ radius of hazardous waste sites to schools](https://gluesolutions.github.io/map3.html)
 
-
-
-
-
-
 ## Charter and private schools
 
 ## Cudahy case study
@@ -53,3 +49,11 @@ There are certain policies school districts in California must consider when dec
 In 2021-2022 state legislative cycle, Assemblymember Christina Garcia introduced AB 2214.
 
 
+# Sources
+
+1. Choi et al., 2006
+1. Maantay et al., 2010; Brender et al., 2011; Johnson et al., 2016
+1. National Center for Education Statistics 2018
+1. Landrigan 2018
+1. Pastor et al., 2002
+1. Meng 2020
