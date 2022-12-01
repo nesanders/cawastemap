@@ -43,7 +43,7 @@ JINJA_FILTERS = bulrush.FILTERS
 DISPLAY_PAGES_ON_MENU = True
 
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['assets', 'mdx-include']
+PLUGINS = ['assets']
 
 GITHUB_URL = 'https://github.com/nesanders/cawastemap'
 # Turn off category pages - see https://stackoverflow.com/a/31884167
@@ -64,10 +64,18 @@ PAGINATED_TEMPLATES = {
     'author': None
 }
 
+READERS = {'html': None}
+
 STATIC_PATHS = [
     'images',
     'extras',
 ]
 EXTRA_PATH_METADATA = {
-    'extras/favicon.ico': {'path': 'favicon.ico'}
+    'extras/favicon.ico': {'path': 'favicon.ico'},
+    'extras/gluesolutions.github.io_map1.html': {'path': 'pages/map1.html'}
+}
+
+# Used to allow html includes in markdown
+MARKDOWN = {
+    'extensions': ['mdx_include']
 }
