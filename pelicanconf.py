@@ -72,7 +72,14 @@ STATIC_PATHS = [
 ]
 EXTRA_PATH_METADATA = {
     'extras/favicon.ico': {'path': 'favicon.ico'},
-    'extras/gluesolutions.github.io_map1.html': {'path': 'pages/map1.html'}
+    'extras/gluesolutions.github.io_map1.html': {'path': 'pages/map1.html'},
+    'extras/gluesolutions.github.io_map2.html': {'path': 'pages/map2.html'},
+    'extras/gluesolutions.github.io_map3.html': {'path': 'pages/map3.html'},
+    'extras/hzw_sites.geojson': {'path': 'hzw_sites.geojson'},
+    'extras/private_schools.geojson': {'path': 'private_schools.geojson'},
+    'extras/public_schools.geojson': {'path': 'public_schools.geojson'},
+    'extras/calenviroscreen.geojson': {'path': 'calenviroscreen.geojson'},
+    'extras/charter_schools.geojson': {'path': 'charter_schools.geojson'}
 }
 
 # Used to allow html includes in markdown

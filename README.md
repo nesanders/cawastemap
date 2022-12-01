@@ -7,4 +7,9 @@ This is [Idalmis Vaquero](https://projects.iq.harvard.edu/climatefellowship/peop
 
 This site was built using Pelican, a static site generator, and is hosted from this repository using GitHub Pages.
 
-To run the site locally, clone the repository, create a python virtual environment with the `pip_requirements.txt`, activate that environment, and run `make devserver`.  You can then view the site locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).  
+To run the site locally, clone the repository, create a python virtual environment with the `pip_requirements.txt`, activate that environment, and run `make devserver`.  You can then view the site locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Syncing data
+
+This site hosts maps which are dependent on geojson files developed by Glue Solutions. The `bash` script `sync_map_files.sh` can be used to pull the latest versions of these from the Glue Solutions repository.
+
