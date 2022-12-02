@@ -75,7 +75,7 @@ EXTRA_PATH_METADATA = {
     'extras/gluesolutions.github.io_map1.html': {'path': 'map1.html'},
     'extras/gluesolutions.github.io_map2.html': {'path': 'map2.html'},
     'extras/gluesolutions.github.io_map3.html': {'path': 'map3.html'},
-    'extras/hzw_sites.geojson': {'path': 'hzw_sites.geojson'},
+    'extras/hzw_sites.geojson': {'path': 'pages/hzw_sites.geojson'},
     'extras/private_schools.geojson': {'path': 'pages/private_schools.geojson'},
     'extras/public_schools.geojson': {'path': 'pages/public_schools.geojson'},
     'extras/calenviroscreen.geojson': {'path': 'pages/calenviroscreen.geojson'},
