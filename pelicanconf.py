@@ -64,7 +64,7 @@ PAGINATED_TEMPLATES = {
     'author': None
 }
 
-READERS = {'html': None}
+READERS = {'html': None, 'js': None}
 
 STATIC_PATHS = [
     'images',
@@ -76,13 +76,15 @@ EXTRA_PATH_METADATA = {
     'extras/gluesolutions.github.io_map2.html': {'path': 'map2.html'},
     'extras/gluesolutions.github.io_map3.html': {'path': 'map3.html'},
     'extras/hzw_sites.geojson': {'path': 'pages/hzw_sites.geojson'},
+    'extras/hzw_near_schools.geojson': {'path': 'pages/hzw_near_schools.geojson'},
     'extras/private_schools.geojson': {'path': 'pages/private_schools.geojson'},
     'extras/public_schools.geojson': {'path': 'pages/public_schools.geojson'},
     'extras/calenviroscreen.geojson': {'path': 'pages/calenviroscreen.geojson'},
-    'extras/charter_schools.geojson': {'path': 'pages/charter_schools.geojson'}
+    'extras/charter_schools.geojson': {'path': 'pages/charter_schools.geojson'},
+    'extras/leaflet-heat.js': {'path': 'pages/leaflet-heat.js'}
 }
 
 # Used to allow html includes in markdown
 MARKDOWN = {
-    'extensions': ['mdx_include']
+    'extensions': ['mdx_include', 'footnotes']
 }
