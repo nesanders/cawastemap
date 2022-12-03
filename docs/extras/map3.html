@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<base target="_top">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Map3</title>
-	
-	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<title>Map3</title>
 
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 600px;
-			width: 800px;
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
+<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
-	<style>#map { width: 1200px; height: 600px; }
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+<style>
+	html, body {
+		height: 100%;
+		margin: 0;
+	}
+	.leaflet-container {
+		height: 600px;
+		width: 800px;
+		max-width: 100%;
+		max-height: 100%;
+	}
+</style>
+
+<style>#map { width: 1200px; height: 600px; }
 .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
 .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
 
@@ -51,139 +51,139 @@ overflow: auto;}
 
 <script type="text/javascript">
 
-	const map = L.map('map').setView([33.94, -118.24], 10);
+const map = L.map('map').setView([33.94, -118.24], 10);
 
-	const tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-		subdomains: 'abcd',
-		maxZoom: 20,
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	}).addTo(map);
+const tiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	subdomains: 'abcd',
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+}).addTo(map);
 
 
-	// get color depending on % BIPOC
-	function getColor(d) {
-		return d > 0.90 ? '#573b88' :
-			d > 0.77  ? '#834ba0' :
-			d > 0.62  ? '#ad5fad' :
-			d > 0.45  ? '#ce78b3' :
-			d > 0.32   ? '#e597b9' :
-			d > 0.21   ? '#f2b9c4' :
-			d > 0   ? '#f9ddda' : '#D3D3D3';
-	}
+// get color depending on % BIPOC
+function getColor(d) {
+	return d > 0.90 ? '#573b88' :
+		d > 0.77  ? '#834ba0' :
+		d > 0.62  ? '#ad5fad' :
+		d > 0.45  ? '#ce78b3' :
+		d > 0.32   ? '#e597b9' :
+		d > 0.21   ? '#f2b9c4' :
+		d > 0   ? '#f9ddda' : '#D3D3D3';
+}
 
-	function style(feature) {
-		return {
-			weight: 0.4,
-			opacity: 1,
-			color: 'white',
-			dashArray: '3',
-			fillOpacity: 0.7,
-			fillColor: getColor(feature.properties.BIPOC)
-		};
-	}
+function style(feature) {
+	return {
+		weight: 0.4,
+		opacity: 1,
+		color: 'white',
+		dashArray: '3',
+		fillOpacity: 0.7,
+		fillColor: getColor(feature.properties.BIPOC)
+	};
+}
 
-	function highlightFeature(e) {
-		const layer = e;
+function highlightFeature(e) {
+	const layer = e;
 
-		layer.setStyle({
-			weight: 5,
-			color: '#666',
-			dashArray: '',
-			fillOpacity: 0.7
-		});
+	layer.setStyle({
+		weight: 5,
+		color: '#666',
+		dashArray: '',
+		fillOpacity: 0.7
+	});
 
-	}
-	map.createPane('heatmap');
-	map.getPane('heatmap').style.zIndex = 650;
+}
+map.createPane('heatmap');
+map.getPane('heatmap').style.zIndex = 650;
 
-	/* global censusData */
-	const geojson = L.geoJson(censusData, {
-		style,
-		onEachFeature,
-	}).addTo(map);
+/* global censusData */
+const geojson = L.geoJson(censusData, {
+	style,
+	onEachFeature,
+}).addTo(map);
 
-	function resetHighlight(e) {
-		const layer = e;
-        geojson.resetStyle(layer);
-	}
+function resetHighlight(e) {
+	const layer = e;
+	geojson.resetStyle(layer);
+}
 
-	function getFirstCorrdinatesFromData(result){
+function getFirstCorrdinatesFromData(result){
 
-    	var firstCordinate = [];
-  	  	for (var i = 0; i < result.length; i++) {
-    		//alert(result[i].geometry.type)
-    		if(result[i].geometry.type == 'MultiPolygon') {
-        		let coordinates = result[i].geometry.coordinates;
-        		firstCordinate.push(coordinates[0][0][0]);
-			}else if(result[i].geometry.type == 'Polygon') {
-				let coordinates = result[i].geometry.coordinates;
-    			firstCordinate.push(coordinates[0][0]);
-			}else if(result[i].geometry.type == 'Point') {
-				let coordinates = result[i].geometry.coordinates;
-    			firstCordinate.push([coordinates[1],coordinates[0]]);
-			 }
-		 }
-  		return firstCordinate;
+	var firstCordinate = [];
+	for (var i = 0; i < result.length; i++) {
+		//alert(result[i].geometry.type)
+		if(result[i].geometry.type == 'MultiPolygon') {
+			let coordinates = result[i].geometry.coordinates;
+			firstCordinate.push(coordinates[0][0][0]);
+		}else if(result[i].geometry.type == 'Polygon') {
+			let coordinates = result[i].geometry.coordinates;
+			firstCordinate.push(coordinates[0][0]);
+		}else if(result[i].geometry.type == 'Point') {
+			let coordinates = result[i].geometry.coordinates;
+			firstCordinate.push([coordinates[1],coordinates[0]]);
+			}
 		}
-	var arrayOfCoordinates=getFirstCorrdinatesFromData(hzwSites.features);
+	return firstCordinate;
+	}
+var arrayOfCoordinates=getFirstCorrdinatesFromData(hzwSites.features);
 
 
-	var heat = L.heatLayer(arrayOfCoordinates,
-							{radius: 20, 
-							minOpacity: 0.2,
-							max: 1,
-							gradient: {0: '#fee5d9', 0.20: '#fcae91', 0.40: '#fb6a4a', 0.60: '#de2d26', 0.80: '#a50f15'},
-							pane: 'heatmap',
-							},
-					).addTo(map);
-	
+var heat = L.heatLayer(arrayOfCoordinates,
+						{radius: 20, 
+						minOpacity: 0.2,
+						max: 1,
+						gradient: {0: '#fee5d9', 0.20: '#fcae91', 0.40: '#fb6a4a', 0.60: '#de2d26', 0.80: '#a50f15'},
+						pane: 'heatmap',
+						},
+				).addTo(map);
 
-	function onEachFeature(feature, layer) {
-		layer.on({
-			'mouseover': function (e) {
-				highlightFeature(e.target);
-			},
-			'mouseout': function (e) {
-				resetHighlight(e.target);
-			},
-		});
+
+function onEachFeature(feature, layer) {
+	layer.on({
+		'mouseover': function (e) {
+			highlightFeature(e.target);
+		},
+		'mouseout': function (e) {
+			resetHighlight(e.target);
+		},
+	});
+}
+
+
+var baseMaps = {
+	"Basemap": tiles,
+};
+
+var overlayMaps = {
+	"% BIPOC": geojson,
+	"Density of Hazardous Waste Sites": heat,
+};
+
+map.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
+
+var layerControl = L.control.layers(baseMaps, overlayMaps, {position: 'bottomleft'}).addTo(map);
+
+const legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+	const div = L.DomUtil.create('div', 'info legend');
+	const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+	const labels = [];
+	let from, to;
+
+	for (let i = 0; i < grades.length; i++) {
+		from = grades[i];
+		to = grades[i + 1];
+
+		labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
 	}
 
+	div.innerHTML = labels.join('<br>');
+	return div;
+};
 
-	var baseMaps = {
-    	"Basemap": tiles,
-	};
-	
-	var overlayMaps = {
-    	"% BIPOC": geojson,
-		"Density of Hazardous Waste Sites": heat,
-	};
-
-	map.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
-
-	var layerControl = L.control.layers(baseMaps, overlayMaps, {position: 'bottomleft'}).addTo(map);
-
-	const legend = L.control({position: 'bottomright'});
-
-	legend.onAdd = function (map) {
-
-		const div = L.DomUtil.create('div', 'info legend');
-		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
-		const labels = [];
-		let from, to;
-
-		for (let i = 0; i < grades.length; i++) {
-			from = grades[i];
-			to = grades[i + 1];
-
-			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
-		}
-
-		div.innerHTML = labels.join('<br>');
-		return div;
-	};
-
-	legend.addTo(map);
+legend.addTo(map);
 
 </script>
 

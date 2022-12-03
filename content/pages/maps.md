@@ -10,6 +10,10 @@ The environmental justice (EJ) movement rose in the 1970s from the group of resi
 
 {!+ content/extras/map1.html !}
 
+{!+ content/extras/map2.html !}
+
+{!+ content/extras/map3.html !}
+
 # What is environmental racism?
 
 Since its inception, the EJ movement coined the concept of environmental racism to describe how Black, Indigenous, and communities of color (BIPOC) are disproportionately exposed to toxic and hazardous waste based on race. Environmental racism calls out the barriers, laws, regulations, and policies our government uses to allow the placement of and the unequal protection the government provides to BIPOC communities from the dangers of hazardous waste facilities. 
