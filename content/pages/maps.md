@@ -1,5 +1,7 @@
 Title: maps
 
+{!+ content/extras/gluesolutions.github.io_map_leaflet_header.html !}
+
 1.  **Introduction of the problem**
 
     a.  **What are hazardous waste facilities?**
@@ -12,8 +14,7 @@ Hazardous waste facilities are regulated sites that are allowed to produce, trea
 
 i.  Map of race and facilities
 
-
-{!+ content/extras/map1.html !}
+<div id='map1' class='map'></div>
 
 b.  **What is environmental racism?**
 
@@ -28,7 +29,7 @@ i.  Heat Map of hazardous waste site density and race zoomed in on the City of V
 ii. Side by side comparison with CalEnviroScreen map of the area
 
 
-{!+ content/extras/map2.html !}
+<div id='map2' class='map'></div>
 
 2.  **Method of analysis**
 
@@ -55,7 +56,7 @@ A study based in Boston found that schools with disproportionately higher percen
 i.  Map of ¼ radius of hazardous waste sites to schools
 
 
-{!+ content/extras/map3.html !}
+<div id='map3' class='map'></div>
 
 3.  **Gap in hazardous waste law**
 
@@ -146,3 +147,6 @@ Although Cudahy Alliance for Justice successfully prevented the construction of 
 [^31]: California Legislative Information, [AB 762- Hazardous emissions and substances: schoolsites: private and charter schools](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB762) (last accessed Dec. 2, 2022); California Legislative Information, [AB 2214- California Environmental Quality Act: schoolsites: acquisition of property: schools districts, charter schools, and private schools](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2214) (last accessed Dec. 2, 2022).
 
 [^32]: California Senate Committee on Appropriations, [AB 2214 Bill Analysis](C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf) (last accessed Dec. 2, 2022).
+
+
+{!+ content/extras/gluesolutions.github.io_map_script.html !}

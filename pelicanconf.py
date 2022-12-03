@@ -72,9 +72,6 @@ STATIC_PATHS = [
 ]
 EXTRA_PATH_METADATA = {
     'extras/favicon.ico': {'path': 'favicon.ico'},
-    'extras/gluesolutions.github.io_map1.html': {'path': 'map1.html'},
-    'extras/gluesolutions.github.io_map2.html': {'path': 'map2.html'},
-    'extras/gluesolutions.github.io_map3.html': {'path': 'map3.html'},
     'extras/hzw_sites.geojson': {'path': 'pages/hzw_sites.geojson'},
     'extras/hzw_near_schools.geojson': {'path': 'pages/hzw_near_schools.geojson'},
     'extras/private_schools.geojson': {'path': 'pages/private_schools.geojson'},

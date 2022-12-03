@@ -1,0 +1,543 @@
+
+<script type="text/javascript" src="calenviroscreen.geojson"></script>
+<script type="text/javascript" src="hzw_sites.geojson"></script>
+<script type="text/javascript" src="hzw_near_schools.geojson"></script>
+<script type="text/javascript" src="public_schools.geojson"></script>
+<script type="text/javascript" src="charter_schools.geojson"></script>
+<script type="text/javascript" src="private_schools.geojson"></script>
+
+
+<script type="text/javascript" src="leaflet-heat.js"></script>
+
+<script type="text/javascript">
+
+	const map1 = L.map('map1').setView([33.94, -118.24], 10);
+
+	const tiles1 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+		subdomains: 'abcd',
+		maxZoom: 20,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	}).addTo(map1);
+
+
+	const map2 = L.map('map2').setView([33.94, -118.24], 10);
+	const tiles2 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+		subdomains: 'abcd',
+		maxZoom: 20,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	}).addTo(map2);
+
+	const map3 = L.map('map3').setView([33.94, -118.24], 10);
+	const tiles3 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+		subdomains: 'abcd',
+		maxZoom: 20,
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	}).addTo(map3);
+
+
+	// control that shows state info on hover
+	const info1 = L.control();
+	const info2 = L.control();
+
+	info1.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		info1.showbasic();
+		return this._div;
+	};
+	var selected1 = null;
+
+	info2.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		info2.showbasic();
+		return this._div;
+	};
+	var selected2 = null;
+
+
+	info1.showfull = function (props) {
+		const tract = props ? props.Tract : 0;
+
+		const approxLoc = props ? props.ApproxLoc : "";
+		var hzwFocus = hzwSites.features.filter(function (el) {
+			return el.properties.Tract == tract;
+		});
+
+		var HTML = "<b>Hazardous Waste Sites for "+approxLoc+"</b><br><table><th>Project Name</th><th>Address</th><th>Site Type</th><th>Status</th><th>Past Uses</th>";
+		for(let key in hzwFocus)
+		{
+    		HTML += "<tr><td>"+hzwFocus[key].properties.PROJECT_NAME+"</td><td>"+hzwFocus[key].properties.ADDRESS+"</td><td>"+hzwFocus[key].properties.SITE_TYPE+"</td><td>"+hzwFocus[key].properties.STATUS+"</td><td>"+hzwFocus[key].properties.PAST_USES+"</td></tr>";
+		}
+		HTML += "</tr></table>";
+		const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+		this._div.innerHTML = contents;
+	};
+
+	info1.showbasic = function (props) {
+		const tract = props ? props.Tract : 0;
+
+		const approxLoc = props ? props.ApproxLoc : "";
+
+		var hzwFocus = hzwSites.features.filter(function (el) {
+			return el.properties.Tract == tract;
+		});
+
+		var HTML = "<b>Hazardous Waste Sites for "+approxLoc+"</b> <br> There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+		const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+		this._div.innerHTML = contents;
+	};
+
+
+	info2.showfull = function (props) {
+		const tract = props ? props.Tract : 0;
+
+		const approxLoc = props ? props.ApproxLoc : "";
+		var hzwFocus = hzwSitesNear.features.filter(function (el) {
+			return el.properties.Tract == tract;
+		});
+
+		var HTML = "<b>Hazardous Waste Sites for "+approxLoc+"</b><br><table><th>Project Name</th><th>Address</th><th>Site Type</th><th>Status</th><th>Past Uses</th>";
+		for(let key in hzwFocus)
+		{
+    		HTML += "<tr><td>"+hzwFocus[key].properties.PROJECT_NAME+"</td><td>"+hzwFocus[key].properties.ADDRESS+"</td><td>"+hzwFocus[key].properties.SITE_TYPE+"</td><td>"+hzwFocus[key].properties.STATUS+"</td><td>"+hzwFocus[key].properties.PAST_USES+"</td></tr>";
+		}
+		HTML += "</tr></table>";
+		const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+		this._div.innerHTML = contents;
+	};
+
+	info2.showbasic = function (props) {
+		const tract = props ? props.Tract : 0;
+
+		const approxLoc = props ? props.ApproxLoc : "";
+
+		var hzwFocus = hzwSitesNear.features.filter(function (el) {
+			return el.properties.Tract == tract;
+		});
+
+		var HTML = "<b>Hazardous Waste Sites for "+approxLoc+"</b> <br> There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+		const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+		this._div.innerHTML = contents;
+	};
+
+	info1.addTo(map1);
+	info2.addTo(map2);
+
+
+	function getColor(d) {
+		return d > 0.90 ? '#573b88' :
+			d > 0.77  ? '#834ba0' :
+			d > 0.62  ? '#ad5fad' :
+			d > 0.45  ? '#ce78b3' :
+			d > 0.32   ? '#e597b9' :
+			d > 0.21   ? '#f2b9c4' :
+			d > 0   ? '#f9ddda' : '#D3D3D3';
+	}
+
+	function style(feature) {
+		return {
+			weight: 0.4,
+			opacity: 1,
+			color: 'white',
+			dashArray: '3',
+			fillOpacity: 0.7,
+			fillColor: getColor(feature.properties.BIPOC)
+		};
+	}
+
+	function highlightFeature1(e) {
+		const layer = e;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+		if (selected1 === null){
+			info1.showbasic(layer.feature.properties);
+			}
+	}
+
+	function highlightFeature2(e) {
+		const layer = e;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+		if (selected2 === null){
+			info2.showbasic(layer.feature.properties);
+			}
+	}
+	function highlightFeature3(e) {
+		const layer = e;
+
+		layer.setStyle({
+			weight: 5,
+			color: '#666',
+			dashArray: '',
+			fillOpacity: 0.7
+		});
+
+	}
+
+	const geojson1 = L.geoJson(censusData, {
+		style,
+		onEachFeature: onEachFeature1
+	}).addTo(map1);
+
+	const geojson2 = L.geoJson(censusData, {
+		style,
+		onEachFeature: onEachFeature2
+	}).addTo(map2);
+
+	const geojson3 = L.geoJson(censusData, {
+		style,
+		onEachFeature: onEachFeature3
+	}).addTo(map3);
+
+
+	var publicSchoolMarkerOptions = {
+    	radius: 2,
+    	fillColor: "#FFD700",
+    	color: "#000",
+    	weight: 0,
+    	opacity: 1,
+    	fillOpacity: 0.8
+	};
+
+
+	const publicschools1 = L.geoJson(publicSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map1);
+
+
+	const publicschools2 = L.geoJson(publicSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map2);
+
+
+	const charterschools1 = L.geoJson(charterSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map1);
+
+	const charterschools2 = L.geoJson(charterSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map2);
+
+
+	const privateschools1 = L.geoJson(privateSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map1);
+
+	const privateschools2 = L.geoJson(privateSchools, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+    	}
+	}).addTo(map2);
+
+
+	var geojsonMarkerOptions = {
+    	radius: 2,
+    	fillColor: "red",
+    	color: "#000",
+    	weight: 0,
+    	opacity: 1,
+    	fillOpacity: 0.8
+	};
+
+	const hzw1 = L.geoJson(hzwSites, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, geojsonMarkerOptions);
+    	}
+	}).addTo(map1);
+
+	const hzw2 = L.geoJson(hzwSitesNear, {
+    	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, geojsonMarkerOptions);
+    	}
+	}).addTo(map2);
+
+
+	map3.createPane('heatmap');
+	map3.getPane('heatmap').style.zIndex = 650;
+
+
+	function getFirstCorrdinatesFromData(result){
+
+    	var firstCordinate = [];
+  	  	for (var i = 0; i < result.length; i++) {
+    		//alert(result[i].geometry.type)
+    		if(result[i].geometry.type == 'MultiPolygon') {
+        		let coordinates = result[i].geometry.coordinates;
+        		firstCordinate.push(coordinates[0][0][0]);
+			}else if(result[i].geometry.type == 'Polygon') {
+				let coordinates = result[i].geometry.coordinates;
+    			firstCordinate.push(coordinates[0][0]);
+			}else if(result[i].geometry.type == 'Point') {
+				let coordinates = result[i].geometry.coordinates;
+    			firstCordinate.push([coordinates[1],coordinates[0]]);
+			 }
+		 }
+  		return firstCordinate;
+		}
+	var arrayOfCoordinates=getFirstCorrdinatesFromData(hzwSites.features);
+
+
+	var heat = L.heatLayer(arrayOfCoordinates,
+							{radius: 20, 
+							minOpacity: 0.2,
+							max: 1,
+							gradient: {0: '#fee5d9', 0.20: '#fcae91', 0.40: '#fb6a4a', 0.60: '#de2d26', 0.80: '#a50f15'},
+							pane: 'heatmap',
+							},
+					).addTo(map3);
+	
+
+	function resetHighlight1(e) {
+		const layer = e;
+        if (selected1 === null || selected1.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson1.resetStyle(layer);
+        }
+	}
+
+	function onClick1(e) {
+		const layer = e;
+        if (selected1 !== null) {
+            var previous = selected1;
+        }
+		info1.showfull(layer.feature.properties);
+		selected1 = layer;
+		if (previous && selected1.feature.properties.Tract !== previous.feature.properties.Tract) {
+			resetHighlight1(previous);
+			}
+		else if (previous && selected1.feature.properties.Tract == previous.feature.properties.Tract){
+			selected1 = null;
+			resetHighlight1(previous);
+			info1.showbasic(previous.feature.properties);
+
+		}
+	}
+
+	function onEachFeature1(feature, layer) {
+		layer.on({
+			'mouseover': function (e) {
+				highlightFeature1(e.target);
+			},
+			'mouseout': function (e) {
+				resetHighlight1(e.target);
+			},
+			'click': function (e) {
+				onClick1(e.target);
+			}
+		});
+	}
+
+
+	function resetHighlight2(e) {
+		const layer = e;
+        if (selected2 === null || selected2.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson2.resetStyle(layer);
+        }
+	}
+
+	function onClick2(e) {
+		const layer = e;
+        if (selected2 !== null) {
+            var previous = selected2;
+        }
+		info2.showfull(layer.feature.properties);
+		selected2 = layer;
+		if (previous && selected2.feature.properties.Tract !== previous.feature.properties.Tract) {
+			resetHighlight2(previous);
+			}
+		else if (previous && selected2.feature.properties.Tract == previous.feature.properties.Tract){
+			selected2 = null;
+			resetHighlight2(previous);
+			info2.showbasic(previous.feature.properties);
+
+		}
+	}
+
+
+	function resetHighlight3(e) {
+		const layer = e;
+        geojson3.resetStyle(layer);
+	}
+
+	function onEachFeature1(feature, layer) {
+		layer.on({
+			'mouseover': function (e) {
+				highlightFeature1(e.target);
+			},
+			'mouseout': function (e) {
+				resetHighlight1(e.target);
+			},
+			'click': function (e) {
+				onClick1(e.target);
+			}
+		});
+	}
+
+	function onEachFeature2(feature, layer) {
+		layer.on({
+			'mouseover': function (e) {
+				highlightFeature2(e.target);
+			},
+			'mouseout': function (e) {
+				resetHighlight2(e.target);
+			},
+			'click': function (e) {
+				onClick2(e.target);
+			}
+		});
+	}
+
+
+	function onEachFeature3(feature, layer) {
+		layer.on({
+			'mouseover': function (e) {
+				highlightFeature3(e.target);
+			},
+			'mouseout': function (e) {
+				resetHighlight3(e.target);
+			},
+		});
+	}
+
+
+
+	var baseMaps1 = {
+    	"Basemap": tiles1,
+	};
+	
+	var overlayMaps1 = {
+    	"% BIPOC": geojson1,
+    	"Hazardous Waste Sites": hzw1,
+		"Public Schools": publicschools1,
+		"Private Schools": privateschools1,
+		"Charter Schools": charterschools1,
+
+
+	};
+
+	map1.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
+	map1.attributionControl.addAttribution('<a href="https://www.cde.ca.gov/schooldirectory/">Schools data</a>')
+
+	var layerControl1 = L.control.layers(baseMaps1, overlayMaps1, {position: 'bottomleft'}).addTo(map1);
+
+	const legend1 = L.control({position: 'bottomright'});
+
+	legend1.onAdd = function (map) {
+
+		const div = L.DomUtil.create('div', 'info legend');
+		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+		const labels = [];
+		let from, to;
+
+		for (let i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend1.addTo(map1);
+
+
+
+	var baseMaps2 = {
+    	"Basemap": tiles2,
+	};
+	
+	var overlayMaps2 = {
+    	"% BIPOC": geojson2,
+    	"Hazardous Waste Sites": hzw2,
+		"Public Schools": publicschools2,
+		"Private Schools": privateschools2,
+		"Charter Schools": charterschools2,
+
+
+	};
+
+	map2.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
+	map2.attributionControl.addAttribution('<a href="https://www.cde.ca.gov/schooldirectory/">Schools data</a>')
+
+	var layerControl2 = L.control.layers(baseMaps2, overlayMaps2, {position: 'bottomleft'}).addTo(map2);
+
+	const legend2 = L.control({position: 'bottomright'});
+
+	legend2.onAdd = function (map) {
+
+		const div = L.DomUtil.create('div', 'info legend');
+		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+		const labels = [];
+		let from, to;
+
+		for (let i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend2.addTo(map2);
+
+
+	var baseMaps3 = {
+    	"Basemap": tiles3,
+	};
+	
+	var overlayMaps3 = {
+    	"% BIPOC": geojson3,
+		"Density of Hazardous Waste Sites": heat,
+	};
+
+	map3.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
+
+	var layerControl3 = L.control.layers(baseMaps3, overlayMaps3, {position: 'bottomleft'}).addTo(map3);
+
+	const legend3 = L.control({position: 'bottomright'});
+
+	legend3.onAdd = function (map) {
+
+		const div = L.DomUtil.create('div', 'info legend');
+		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+		const labels = [];
+		let from, to;
+
+		for (let i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend3.addTo(map3);
+</script>
