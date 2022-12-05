@@ -9,9 +9,7 @@ wget https://gluesolutions.github.io/charter_schools.geojson content/extras/char
 wget https://gluesolutions.github.io/private_schools.geojson content/extras/private_schools.geojson
 
 # html files
-wget https://gluesolutions.github.io/map1.html content/extras/gluesolutions.github.io_map1.html
-wget https://gluesolutions.github.io/map2.html content/extras/gluesolutions.github.io_map2.html
-wget https://gluesolutions.github.io/map3.html content/extras/gluesolutions.github.io_map3.html
+# The HTML files are synced manually into the gluesolutions.github.io_map_*.html files.
 
 # javascript files
 wget https://gluesolutions.github.io/leaflet-heat.js content/extras/leaflet-heat.js
