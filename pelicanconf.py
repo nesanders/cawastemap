@@ -71,6 +71,7 @@ STATIC_PATHS = [
     'extras',
 ]
 EXTRA_PATH_METADATA = {
+    'extras/custom.css': {'path': 'custom.css'},
     'extras/favicon.ico': {'path': 'favicon.ico'},
     'extras/hzw_sites.geojson': {'path': 'pages/hzw_sites.geojson'},
     'extras/hzw_near_schools.geojson': {'path': 'pages/hzw_near_schools.geojson'},
