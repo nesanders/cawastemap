@@ -1,10 +1,14 @@
-Title: maps
+Title: The Story of Waste, Schools, and Justice in California
+slug: maps
+    
 
 {!+ content/extras/gluesolutions.github.io_map_leaflet_header.html !}
 
-1.  **Introduction of the problem**
+# The Story of Hazardous Waste, Schools, and Environmental Justice in California
 
-    a.  **What are hazardous waste facilities?**
+##  **Introduction of the problem**
+
+###  **What are hazardous waste facilities?**
 
 The environmental justice (EJ) movement rose in the 1970s from the group of residents in Warren County, North Carolina who fought against the disposal of polychlorinated biphenyls (PCBs) in their community.[^1] This was one of the first prominent examples highlighting the disproportionate exposure to hazardous waste low-income communities of color face throughout the country. This fight also led to the seminal report by the United Church of Christ's Commission for Racial Justice titled *Toxic Wastes and Race in the United States*.[^2] This report, and other subsequent studies, have found that low-income communities and communities of color are more likely to live close to high-polluting industries, hazardous waste facilities, and incinerators.[^3]
 
@@ -12,11 +16,11 @@ Hazardous waste facilities are regulated sites that are allowed to produce, trea
 
 *The map below shows the precent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the State.*
 
-i.  Map of race and facilities
+####  Map of race and facilities
 
 <div id='map1' class='map'></div>
 
-b.  **What is environmental racism?**
+### **What is environmental racism?**
 
 The term environmental racism has been used to describe how Black, Indigenous, and communities of color (BIPOC) are disproportionately exposed to toxic and hazardous waste based on race. Environmental racism calls out the barriers, laws, regulations, and policies our government uses to allow the placement of and the unequal protection the government provides to BIPOC communities from the dangers of hazardous waste facilities.
 
@@ -24,14 +28,14 @@ Southeast Los Angeles (SELA) provides an example of environmental racism in Cali
 
 *To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
 
-i.  Heat Map of hazardous waste site density and race zoomed in on the City of Vernon
+####  Heat Map of hazardous waste site density and race zoomed in on the City of Vernon
 
-ii. Side by side comparison with CalEnviroScreen map of the area
+#### Side by side comparison with CalEnviroScreen map of the area
 
 
 <div id='map2' class='map'></div>
 
-2.  **Method of analysis**
+##  **Method of analysis**
 
 Hazardous waste regulation continues to be an ongoing concern to environmental justice communities. Many environmental justice communities often see a gap in the regulation and enforcement of noncompliant hazardous waste facilities. Once a hazardous waste facility is closed, necessary cleanup is often delayed and/or to remediation methods or standards that are unacceptable to the surrounding community.
 
@@ -39,7 +43,7 @@ The following maps were created as part of the Climate Justice Design Fellowship
 
 There are several data limitations. First, EnviroStor is not updated regularly and not all information about a site or facility is complete. EnviroStor is not a fully inclusive list of all sites with known or potential contamination. For example, sites on the State's Cortese List and not all Toxic Release Inventory facilities are on EnviroStor.
 
-a.  **Why schools?**
+###  **Why schools?**
 
 School-age children spend a significant amount number of hours in schools. In 2021, nearly 50.7 million school-aged children spend at least six hours in schools across the country.[^10] Many of these schools are located in close proximity to or at time, built on top of, hazardous waste sites. As a result, the school locations are considered a key determinant of exposure to toxic pollutants.
 
@@ -53,12 +57,12 @@ A study based in Boston found that schools with disproportionately higher percen
 
 *The map below shows the hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State .*
 
-i.  Map of ¼ radius of hazardous waste sites to schools
+#### Map of ¼ radius of hazardous waste sites to schools
 
 
 <div id='map3' class='map'></div>
 
-3.  **Gap in hazardous waste law**
+## **Gap in hazardous waste law**
 
 There are certain environmental requirements public schools must consider when deciding where to site new public schools to ensure that new school sites will not endanger the health of students and school employees.[^17] At different points throughout the selection and before the purchase of a new school site, school districts are required to follow the California Environmental Quality Act process and obtain approvals on the adequacy of the site from the California Department of Toxic Substances Control and the California Department of Education.[^18] Existing law requires prohibits school districts from locating public schools on land that was previously a hazardous waste disposal site or solid waste disposal site unless the waste has been removed.[^19] If a school site is within 500 feet from a freeway or other busy traffic corridor, the school district must also show that the air quality at the propose site will not create the short-term nor long-term health impacts on students.[^20] A school district may still be able to site a school that does not meet either of these requirements if it can show that there are no other suitable sites and that there is a severe storage of sites.[^21]
 
@@ -70,7 +74,7 @@ These requirements, which are meant to protect the health and well-being of stud
 
 This lack of regulation on charter and private schools means that a school is more likely to get built on contaminated site without proper assessment of the safety or health impacts this constant exposure could have on students, teachers, and school staff.
 
-a.  **Cudahy case study**
+###  **Cudahy case study**
 
 Just 11 miles southeast from downtown Los Angeles, residents in the City of Cudahy recently fought these gaps in regulation. Cudahy is in the 97^th^ percentile of communities most impacted by pollution in the State and is considered an environmental justice community. Of the five schools in Cudahy, two are built on or adjacent to hazardous waste sites.[^28]
 
@@ -78,11 +82,12 @@ In 2020, KIPP SoCal Public Schools had plans to build a new elementary school on
 
 In 2022, a superior court judge ruled in favor of Cudahy Alliance for Justice and local residents and required that the City complete an EIR for the project and properly clean up the site with DTSC oversight.[^30] In fall of 2022, KIPP decided to abandon plans to build the school in Cudahy.
 
-4.  **Solutions**
+## **Solutions**
 
 There have been two bills in previous legislative sessions that have tried to fix this gap in regulation: Assembly Bill 762 (Lee, 2021) and AB 2214 (Garcia, 2022).[^31] Both of these bills died in the suspense file in the Senate Appropriations Committee, in part due to the strong opposition from charter school lobbying.[^32]
 
 Although Cudahy Alliance for Justice successfully prevented the construction of a charter school, communities should not be forced to find an attorney and litigate a case every time a charter or private school is proposed on a former hazardous waste site. It is more likely that more of these situations will happen in environmental justice communities, where low-income working-class people are unable to stay abreast of new school projects in their neighborhood and unable to obtain an attorney to challenge projects. Legislative change is possible, and needed, in order to protect communities across the State.
+
 
 [^1]: United Church of Christ, [*A Movement Is Born: Environmental Justice and the UCC*](https://www.ucc.org/what-we-do/justice-local-church-ministries/justice/faithful-action-ministries/environmental-justice/a_movement_is_born_environmental_justice_and_the_ucc/) (last accessed December 2, 2022).
 
