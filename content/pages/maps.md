@@ -28,12 +28,15 @@ Southeast Los Angeles (SELA) provides an example of environmental racism in Cali
 
 *To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
 
-####  Heat Map of hazardous waste site density and race zoomed in on the City of Vernon
-
-#### Side by side comparison with CalEnviroScreen map of the area
-
-
-<div id='map2' class='map'></div>
+<table>
+    <tr>
+        <td style="width: 70%">
+<div id='map3' class='map' style='width: 505%'></div>
+        </td>
+        <td style="width: 30%">
+            <img src='CalEnviroScreen_Vernon.png'></img>
+        </td>
+</table>
 
 ##  **Method of analysis**
 
@@ -60,7 +63,7 @@ A study based in Boston found that schools with disproportionately higher percen
 #### Map of ¼ radius of hazardous waste sites to schools
 
 
-<div id='map3' class='map'></div>
+<div id='map2' class='map'></div>
 
 ## **Gap in hazardous waste law**
 

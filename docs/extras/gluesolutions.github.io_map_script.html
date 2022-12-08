@@ -1,3 +1,4 @@
+<!-- This content manually migrated from https://github.com/gluesolutions/gluesolutions.github.io/blob/main/index.html -->
 
 <script type="text/javascript" src="calenviroscreen.geojson"></script>
 <script type="text/javascript" src="hzw_sites.geojson"></script>
@@ -27,7 +28,7 @@
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	}).addTo(map2);
 
-	const map3 = L.map('map3').setView([33.94, -118.24], 10);
+	const map3 = L.map('map3').setView([34.00, -118.20], 13);
 	const tiles3 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 		subdomains: 'abcd',
 		maxZoom: 20,
@@ -210,12 +211,30 @@
     	fillOpacity: 0.8
 	};
 
+	var charterSchoolMarkerOptions = {
+    	radius: 2,
+    	fillColor: "#4daf4a",
+    	color: "#000",
+    	weight: 0,
+    	opacity: 1,
+    	fillOpacity: 0.8
+	};
+
+	var privateSchoolMarkerOptions = {
+    	radius: 2,
+    	fillColor: "#386cb0",
+    	color: "#000",
+    	weight: 0,
+    	opacity: 1,
+    	fillOpacity: 0.8
+	};
+
 
 	const publicschools1 = L.geoJson(publicSchools, {
     	pointToLayer: function (feature, latlng) {
         	return L.circleMarker(latlng, publicSchoolMarkerOptions);
     	}
-	}).addTo(map1);
+	});//.addTo(map1);
 
 
 	const publicschools2 = L.geoJson(publicSchools, {
@@ -227,26 +246,26 @@
 
 	const charterschools1 = L.geoJson(charterSchools, {
     	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        	return L.circleMarker(latlng, charterSchoolMarkerOptions);
     	}
-	}).addTo(map1);
+	});//.addTo(map1);
 
 	const charterschools2 = L.geoJson(charterSchools, {
     	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        	return L.circleMarker(latlng, charterSchoolMarkerOptions);
     	}
 	}).addTo(map2);
 
 
 	const privateschools1 = L.geoJson(privateSchools, {
     	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        	return L.circleMarker(latlng, privateSchoolMarkerOptions);
     	}
-	}).addTo(map1);
+	});//.addTo(map1);
 
 	const privateschools2 = L.geoJson(privateSchools, {
     	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        	return L.circleMarker(latlng, privateSchoolMarkerOptions);
     	}
 	}).addTo(map2);
 
@@ -299,10 +318,12 @@
 
 
 	var heat = L.heatLayer(arrayOfCoordinates,
-							{radius: 20, 
-							minOpacity: 0.2,
+							{
+                            radius: 15,
+                            blur: 10,
+							minOpacity: 0.3,
 							max: 1,
-							gradient: {0: '#fee5d9', 0.20: '#fcae91', 0.40: '#fb6a4a', 0.60: '#de2d26', 0.80: '#a50f15'},
+							gradient: {0.2: '#ffffb2', 0.40: '#fecc5c', 0.60: '#fd8d3c', 0.75: '#f03b20', 0.85: '#bd0026'},
 							pane: 'heatmap',
 							},
 					).addTo(map3);
@@ -446,7 +467,7 @@
 
 		const div = L.DomUtil.create('div', 'info legend');
 		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
-		const labels = [];
+		const labels = ["<b> % BIPOC </b>"];
 		let from, to;
 
 		for (let i = 0; i < grades.length; i++) {
@@ -456,12 +477,12 @@
 			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
 		}
 
+        labels.push('<i class="circle" style="background:red"></i> Hazardous Waste Site')
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
 
 	legend1.addTo(map1);
-
 
 
 	var baseMaps2 = {
@@ -478,8 +499,8 @@
 
 	};
 
-	map2.attributionControl.addAttribution('<a href="http://census.gov/">Population data</a>');
-	map2.attributionControl.addAttribution('<a href="https://www.cde.ca.gov/schooldirectory/">Schools data</a>')
+	map2.attributionControl.addAttribution('<a href="http://census.gov/">Census</a>');
+	map2.attributionControl.addAttribution('<a href="https://www.cde.ca.gov/schooldirectory/">Schools Info</a>')
 
 	var layerControl2 = L.control.layers(baseMaps2, overlayMaps2, {position: 'bottomleft'}).addTo(map2);
 
@@ -489,7 +510,7 @@
 
 		const div = L.DomUtil.create('div', 'info legend');
 		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
-		const labels = [];
+		const labels = ["<b> % BIPOC </b>"];
 		let from, to;
 
 		for (let i = 0; i < grades.length; i++) {
@@ -498,6 +519,10 @@
 
 			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
 		}
+        labels.push('<i class="circle" style="background:red"></i> Hazardous Waste Site')
+        labels.push('<i class="circle" style="background:#FFD700"></i> Public Schools')
+        labels.push('<i class="circle" style="background:#4daf4a"></i> Charter Schools')
+        labels.push('<i class="circle" style="background:#386cb0"></i> Private Schools')
 
 		div.innerHTML = labels.join('<br>');
 		return div;
@@ -525,7 +550,7 @@
 
 		const div = L.DomUtil.create('div', 'info legend');
 		const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
-		const labels = [];
+		const labels = ["<b> % BIPOC </b>"];
 		let from, to;
 
 		for (let i = 0; i < grades.length; i++) {
@@ -534,10 +559,12 @@
 
 			labels.push(`<i style="background:${getColor(from+0.01)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
 		}
-
+        labels.push('<p>')
+        labels.push('<i style="background-image: linear-gradient(to right, red, orange)"></i> Density of Waste Sites')
 		div.innerHTML = labels.join('<br>');
 		return div;
 	};
 
 	legend3.addTo(map3);
 </script>
+
