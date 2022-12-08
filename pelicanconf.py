@@ -80,7 +80,7 @@ EXTRA_PATH_METADATA = {
     'extras/calenviroscreen.geojson': {'path': 'pages/calenviroscreen.geojson'},
     'extras/charter_schools.geojson': {'path': 'pages/charter_schools.geojson'},
     'extras/leaflet-heat.js': {'path': 'pages/leaflet-heat.js'},
-    'images/Screenshot_20221207_211102_CalEnviroScreen_Vernon.png': {'path': 'pages/CalEnviroScreen_Vernon.png'}
+    'images/Screenshot_20221208_070155_CalEnviroScreen_Vernon_tall.png': {'path': 'pages/CalEnviroScreen_Vernon.png'}
 }
 
 # Used to allow html includes in markdown

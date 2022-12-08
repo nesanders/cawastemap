@@ -16,7 +16,6 @@ Hazardous waste facilities are regulated sites that are allowed to produce, trea
 
 *The map below shows the precent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the State.*
 
-####  Map of race and facilities
 
 <div id='map1' class='map'></div>
 
@@ -26,14 +25,14 @@ The term environmental racism has been used to describe how Black, Indigenous, a
 
 Southeast Los Angeles (SELA) provides an example of environmental racism in California. SELA communities abut the City of Vernon which hosts several hazardous waste facilities and several brownfields with known or potential contamination. These sites did not appear randomly but are rather a result of the intentional land use planning and laws which have allowed for multiple sources of hazardous waste to co-exist in or near BIPOC communities.
 
-*To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
+*To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-40">CalEnviroScreen 4.0</a> scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
 
 <table>
     <tr>
-        <td style="width: 70%">
+        <td style="width: 60%">
 <div id='map3' class='map' style='width: 505%'></div>
         </td>
-        <td style="width: 30%">
+        <td style="width: 40%">
             <img src='CalEnviroScreen_Vernon.png'></img>
         </td>
 </table>
@@ -59,8 +58,6 @@ US EPA created a Healthy School Environments Assessment Tool in 2006 to provide 
 A study based in Boston found that schools with disproportionately higher percentages of minority and economically disadvantaged schoolchildren are more likely to be located within a 1 mile radius Toxic Release Inventory (TRI) sites.[^16] The study also found a correlation between schools near TRI sites and low academic performance at the school level, as measured by English language art, math, and science Composite Performance Index scores.
 
 *The map below shows the hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State .*
-
-#### Map of ¼ radius of hazardous waste sites to schools
 
 
 <div id='map2' class='map'></div>
