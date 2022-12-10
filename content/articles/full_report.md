@@ -18,10 +18,7 @@ The environmental justice (EJ) movement rose in the 1970s from the group of resi
 
 Hazardous waste facilities are regulated sites that are allowed to produce, treat, store, and dispose hazardous waste.[^4] In addition to the over 100 permitted sites throughout California, there are also hundreds of sites throughout the State that are undergoing cleanup, investigation, or enforcement for known or suspected contamination issues.[^5] These sites expose communities to a variety of chemicals that can increase the likelihood of cancer, respiratory diseases, neurological, reproductive, and developmental problems.[^6]
 
-*The map below shows the precent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the State.*
-
-
-<div id='map1' class='map'></div>
+{!+ content/extras/haz_demos.html !}
 
 ### **What is environmental racism?**
 
@@ -29,17 +26,7 @@ The term environmental racism has been used to describe how Black, Indigenous, a
 
 Southeast Los Angeles (SELA) provides an example of environmental racism in California. SELA communities abut the City of Vernon which hosts several hazardous waste facilities and several brownfields with known or potential contamination. These sites did not appear randomly but are rather a result of the intentional land use planning and laws which have allowed for multiple sources of hazardous waste to co-exist in or near BIPOC communities.
 
-*To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-40">CalEnviroScreen 4.0</a> scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
-
-<table>
-    <tr>
-        <td style="width: 60%">
-<div id='map3' class='map' style='width: 505%'></div>
-        </td>
-        <td style="width: 40%">
-            <img src='CalEnviroScreen_Vernon.png'></img>
-        </td>
-</table>
+{!+ content/extras/side_by_side_vernon.html !}
 
 ##  **Method of analysis**
 
@@ -61,10 +48,7 @@ US EPA created a Healthy School Environments Assessment Tool in 2006 to provide 
 
 A study based in Boston found that schools with disproportionately higher percentages of minority and economically disadvantaged schoolchildren are more likely to be located within a 1 mile radius Toxic Release Inventory (TRI) sites.[^16] The study also found a correlation between schools near TRI sites and low academic performance at the school level, as measured by English language art, math, and science Composite Performance Index scores.
 
-*The map below shows the hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State .*
-
-
-<div id='map2' class='map'></div>
+{!+ content/extras/haz_near_schools.html !}
 
 ## **Gap in hazardous waste law**
 
@@ -92,6 +76,7 @@ There have been two bills in previous legislative sessions that have tried to fi
 
 Although Cudahy Alliance for Justice successfully prevented the construction of a charter school, communities should not be forced to find an attorney and litigate a case every time a charter or private school is proposed on a former hazardous waste site. It is more likely that more of these situations will happen in environmental justice communities, where low-income working-class people are unable to stay abreast of new school projects in their neighborhood and unable to obtain an attorney to challenge projects. Legislative change is possible, and needed, in order to protect communities across the State.
 
+---
 
 [^1]: United Church of Christ, [*A Movement Is Born: Environmental Justice and the UCC*](https://www.ucc.org/what-we-do/justice-local-church-ministries/justice/faithful-action-ministries/environmental-justice/a_movement_is_born_environmental_justice_and_the_ucc/) (last accessed December 2, 2022).
 

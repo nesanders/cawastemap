@@ -9,32 +9,26 @@ Authors: Idalmis Vaquero
 Status: published
 
 
+{!+ content/extras/gluesolutions.github.io_map_leaflet_header.html !}
+
 <figure> 
-<a href="images/cbe_signs.jpg"><img src="images/cbe_signs.jpg" alt="[A group of people holding signs"></a>
+<a href="/images/cbe_signs.jpg"><img src="/images/cbe_signs.jpg" alt="[A group of people holding signs"></a>
 <figcaption> Photo Courtesy: <a href="https://www.cbecal.org">Communities for a Better Environment</a> </figcaption>
 </figure>
 
 Hazardous waste continues to be a major issue for communities several decades after the start of the EJ movement. Hazardous waste facilities are regulated sites that are allowed to produce, treat, store, and dispose hazardous waste.[^1] In addition to the over 100 permitted sites throughout California, there are also hundreds of sites throughout the State that are undergoing cleanup, investigation, or enforcement for known or suspected contamination issues.[^2] These sites expose communities to a variety of chemicals that can increase the likelihood of cancer, respiratory diseases, neurological, reproductive, and developmental problems.[^3]
 
-*The map below shows the precent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the State.*
-
-i.  Map of race and facilities
+{!+ content/extras/haz_demos.html !}
 
 This map shows a pattern of more hazardous waste sites located in census tracts with higher percentages of BIPOC.
 
 Environmental racism describes how Black, Indigenous, and communities of color (BIPOC) are disproportionately exposed to toxic and hazardous waste based on race. Environmental racism calls out the barriers, laws, regulations, and policies our government uses to allow the placement of and the unequal protection the government provides to BIPOC communities from the dangers of hazardous waste facilities.
 
-*To the left is a map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. The picture to the right is a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.*
-
-ii. Heat Map of hazardous waste site density and race zoomed in on the City of Vernon
-
-iii. side comparison with CalEnviroScreen map
-
-![][1]![][2]
+{!+ content/extras/side_by_side_vernon.html !}
 
 Although the City of Vernon has a low population to obtain an CalEnviroScreen 4.0 score, the surrounding census tracts have high CalEnviroScreen scores, which is in part due to the high pollution burden. The map on the left shows the high population of BIPOC around Vernon also live with higher densities of hazardous waste sites when compared to census tracts with lower population of BIPOC.
 
-a.  **Why are schools' proximity to hazardous waste sites concerning?**
+#  **Why are schools' proximity to hazardous waste sites concerning?**
 
 School-age children spend a significant amount number of hours in schools. In 2021, nearly 50.7 million school-aged children spend at least six hours in schools across the country.[^4] Many of these schools are located in close proximity to or at time, built on top of, hazardous waste sites. As a result, the school locations are considered a key determinant of exposure to toxic pollutants.
 
@@ -42,13 +36,11 @@ Environmental justice studies have found race and class inequities in the distri
 
 A study based in Boston found that schools with disproportionately higher percentages of minority and economically disadvantaged schoolchildren are more likely to be located within a 1 mile radius Toxic Release Inventory (TRI) sites.[^7] The study also found a correlation between schools near TRI sites and low academic performance at the school level, as measured by English language art, math, and science Composite Performance Index scores.
 
-*The map below shows the hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State.*
-
-i.  Map of ¼ radius of hazardous waste sites to schools
+{!+ content/extras/haz_near_schools.html !}
 
 Los Angeles County has a high concentration of public, charter, and private schools within a 1/4 mile radius of hazardous waste sites. When selecting the layers for charter schools and hazardous waste sites, you can also see a high concentration of charter schools in Los Angeles within a 1/4 mile radius of hazardous waste sites.
 
-1.  **Advancing solutions from multiple angles.**
+#  **Advancing solutions from multiple angles.**
 
 *Policy solutions:* There have been two bills in previous legislative sessions that have tried to fix this gap in regulation: Assembly Bill 762 (Lee, 2021) and AB 2214 (Garcia, 2022).[^8] Both of these bills died in the suspense file in the Senate Appropriations Committee, in part due to the strong opposition from charter school lobbying.[^9]
 
@@ -59,6 +51,8 @@ Although Cudahy Alliance for Justice successfully prevented the construction of 
 *Affordable, safe housing and other community-centered solutions:* Schools are not the only sensitive receptors being sited near or on contaminated sites. Over the past decade, California's housing crisis has also solidified connections between the need to locate affordable housing away from toxic or polluted land. Land use planners and decisionmakers should require every new housing project to undergo robust environmental review to avoid placing housing on or near contaminated land before adequate cleanup is complete.[^11]
 
 Addressing housing quality issues also requires community-led and community-centered land use planning, so that those most impacted can provide the solutions to improve their qualities of life including investment to critical infrastructure such as clean drinking water and sanitation systems, climate resilient homes, access to green spaces, and robust anti-displacement and anti-gentrification policies.
+
+---
 
 [^1]: California Department of Toxic Substances Control[, *EnviroStor: Report of Permitted Hazardous Waste Facilities in California*] (last accessed on Dec. 2, 2022).
 
@@ -92,3 +86,7 @@ Addressing housing quality issues also requires community-led and community-cent
   [AB 2214 Bill Analysis]: C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf
   [, SB 673 Permit Criteria Implementation]: https://dtsc.ca.gov/sb-673-permit-criteria-implementation/
   [Environmental and Housing Justice Platform]: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/calgreenzones.org/wp-content/uploads/2021/10/CEJA_GZ-EHJP-Full-Platform-Final.pdf
+
+
+
+{!+ content/extras/gluesolutions.github.io_map_script.html !}

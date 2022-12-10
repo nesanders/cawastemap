@@ -2,7 +2,7 @@ import bulrush
 
 AUTHOR = 'Idalmis Vaquero'
 SITENAME = 'The California Map of Hazardous Waste Sites and Schools'
-SITEURL = 'https://nesanders.github.io/cawastemap'
+SITEURL = 'http://127.0.0.1:8000'
 
 PATH = 'content'
 
@@ -29,7 +29,7 @@ SOCIAL = ()
 # SOCIAL = (('You can add links in your config file', '#'),
           # ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 4
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
@@ -40,26 +40,24 @@ THEME = bulrush.PATH
 JINJA_ENVIRONMENT = bulrush.ENVIRONMENT
 JINJA_FILTERS = bulrush.FILTERS
 
-DISPLAY_PAGES_ON_MENU = True
-
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['assets']
 
 GITHUB_URL = 'https://github.com/nesanders/cawastemap'
 # Turn off category pages - see https://stackoverflow.com/a/31884167
-CATEGORY_SAVE_AS = ''
+# CATEGORY_SAVE_AS = ''
 
 # Don't make an authors page
-AUTHOR_SAVE_AS = ''
+# AUTHOR_SAVE_AS = ''
 # Don't make a tags page
-TAG_SAVE_AS = ''
+# TAG_SAVE_AS = ''
 
 # We must set `categories` below to avoid an `article_page` error
 # see https://stackoverflow.com/a/72281950
 PAGINATED_TEMPLATES = {
     'index': None, 
     'tag': None, 
-    'category': None, 
+    'category': 4, 
     'categories': None,
     'author': None
 }
@@ -73,17 +71,32 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     'extras/custom.css': {'path': 'custom.css'},
     'extras/favicon.ico': {'path': 'favicon.ico'},
-    'extras/hzw_sites.geojson': {'path': 'pages/hzw_sites.geojson'},
-    'extras/hzw_near_schools.geojson': {'path': 'pages/hzw_near_schools.geojson'},
-    'extras/private_schools.geojson': {'path': 'pages/private_schools.geojson'},
-    'extras/public_schools.geojson': {'path': 'pages/public_schools.geojson'},
-    'extras/calenviroscreen.geojson': {'path': 'pages/calenviroscreen.geojson'},
-    'extras/charter_schools.geojson': {'path': 'pages/charter_schools.geojson'},
-    'extras/leaflet-heat.js': {'path': 'pages/leaflet-heat.js'},
-    'images/Screenshot_20221208_070155_CalEnviroScreen_Vernon_tall.png': {'path': 'pages/CalEnviroScreen_Vernon.png'}
+    'extras/hzw_sites.geojson': {'path': 'hzw_sites.geojson'},
+    'extras/hzw_near_schools.geojson': {'path': 'hzw_near_schools.geojson'},
+    'extras/private_schools.geojson': {'path': 'private_schools.geojson'},
+    'extras/public_schools.geojson': {'path': 'public_schools.geojson'},
+    'extras/calenviroscreen.geojson': {'path': 'calenviroscreen.geojson'},
+    'extras/charter_schools.geojson': {'path': 'charter_schools.geojson'},
+    'extras/leaflet-heat.js': {'path': 'leaflet-heat.js'},
 }
 
 # Used to allow html includes in markdown
 MARKDOWN = {
     'extensions': ['mdx_include', 'footnotes']
 }
+
+# Add custom menu items
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
+# List these in reverse order - first item goes on right
+MENUITEMS = (
+    ('Full Report', '/report.html'),
+    ('Executive Summary', '/exec-summary.html'),
+    ('About', '/pages/about.html'),
+)
+
+BULRUSH_SHOW_SUMMARY = True
+LINKS = (
+    ('Climate Justice Design Fellowship', 'https://projects.iq.harvard.edu/climatefellowship'),
+    ('Communities for a Better Environment', 'https://www.cbecal.org')
+)
