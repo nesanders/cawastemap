@@ -100,3 +100,5 @@ LINKS = (
     ('Climate Justice Design Fellowship', 'https://projects.iq.harvard.edu/climatefellowship'),
     ('Communities for a Better Environment', 'https://www.cbecal.org')
 )
+
+SUMMARY_MAX_LENGTH = 500
