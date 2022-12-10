@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The California Map of Hazardous Waste Sites and Schools</title><link href="https://ejhazardouswaste.com/" rel="alternate"></link><link href="https://ejhazardouswaste.com/feeds/all.atom.xml" rel="self"></link><id>https://ejhazardouswaste.com/</id><updated>2022-12-10T00:00:00-08:00</updated><entry><title>Executive Summary: The Story of Waste, Schools, and Justice in California</title><link href="https://ejhazardouswaste.com/exec-summary.html" rel="alternate"></link><published>2022-12-10T00:00:00-08:00</published><updated>2022-12-10T00:00:00-08:00</updated><author><name>Idalmis Vaquero</name></author><id>tag:ejhazardouswaste.com,2022-12-10:/exec-summary.html</id><summary type="html">&lt;p&gt;The Executive Summary of the Full Report published on 2022-12-10&lt;/p&gt;</summary><content type="html">&lt;!-- This content manually migrated from https://github.com/gluesolutions/gluesolutions.github.io/blob/main/index.html --&gt;
+
+&lt;p&gt;&lt;head&gt;&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/&gt;&lt;/p&gt;
+&lt;script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""&gt;&lt;/script&gt;
+
+&lt;style&gt;
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .leaflet-container {
+        height: 600px;
+        width: 800px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+&lt;/style&gt;
+
+&lt;style&gt;
+    .map {
+    width: 900px; 
+    height: 500px;
+    padding: 10px;
+    }
+.info { padding: 6px 8px; font: 12px/14px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.leaflet-control{
+    max-height: 270px;
+    max-width: 460px;
+    overflow: auto;
+}
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+.legend .circle{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  margin-left: 4px;
+
+  display: inline-block;  // added this line
+}
+
+
+&lt;/style&gt;
+
+&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
+&lt;figure&gt; 
+&lt;a href="/images/cbe_signs.jpg"&gt;&lt;img src="/images/cbe_signs.jpg" alt="[A group of people holding signs"&gt;&lt;/a&gt;
+&lt;figcaption&gt; Photo Courtesy: &lt;a href="https://www.cbecal.org"&gt;Communities for a Better Environment&lt;/a&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hazardous waste continues to be a major issue for communities several decades after the start of the EJ movement. Hazardous waste facilities are regulated sites that are allowed to produce, treat, store, and dispose hazardous waste.&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; In addition to the over 100 permitted sites throughout California, there are also hundreds of sites throughout the State that are undergoing cleanup, investigation, or enforcement for known or suspected contamination issues.&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; These sites expose communities to a variety of chemicals that can increase the likelihood of cancer, respiratory diseases, neurological, reproductive, and developmental problems.&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure style='float: none; width: 100%'&gt;
+    &lt;div id='map1' class='map'&gt;&lt;/div&gt;
+    &lt;figcaption&gt;Percent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the state.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This map shows a pattern of more hazardous waste sites located in census tracts with higher percentages of BIPOC.&lt;/p&gt;
+&lt;p&gt;Environmental racism describes how Black, Indigenous, and communities of color (BIPOC) are disproportionately exposed to toxic and hazardous waste based on race. Environmental racism calls out the barriers, laws, regulations, and policies our government uses to allow the placement of and the unequal protection the government provides to BIPOC communities from the dangers of hazardous waste facilities.&lt;/p&gt;
+&lt;!-- Side by side comparison of the hazardous waste density map and the CalEnviroScreen zoom on the city of Vernon  --&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td style="width: 60%"&gt;
+            &lt;figure&gt;
+                &lt;div id='map3' class='map'&gt;&lt;/div&gt;
+                &lt;figcaption&gt;Hazardous waste density&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+        &lt;td style="width: 40%"&gt;
+            &lt;figure&gt;
+                &lt;a href="/images/calenviroscreen_vernon.png"&gt;&lt;img src='/images/calenviroscreen_vernon.png' alt='A view of the CalEnviroScreen portal centered on Vernon, CA'&gt;&lt;/a&gt;
+                &lt;figcaption&gt;CalEnviroScreen&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=2&gt;
+            &lt;figure style='float: none; width: 100%; border: none'&gt;
+                &lt;figcaption&gt;
+                Left: map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. Right: a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+    &lt;tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Although the City of Vernon has a low population to obtain an CalEnviroScreen 4.0 score, the surrounding census tracts have high CalEnviroScreen scores, which is in part due to the high pollution burden. The map on the left shows the high population of BIPOC around Vernon also live with higher densities of hazardous waste sites when compared to census tracts with lower population of BIPOC.&lt;/p&gt;
+&lt;h1&gt;&lt;strong&gt;Why are schools' proximity to hazardous waste sites concerning?&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;School-age children spend a significant amount number of hours in schools. In 2021, nearly 50.7 million school-aged children spend at least six hours in schools across the country.&lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt; Many of these schools are located in close proximity to or at time, built on top of, hazardous waste sites. As a result, the school locations are considered a key determinant of exposure to toxic pollutants.&lt;/p&gt;
+&lt;p&gt;Environmental justice studies have found race and class inequities in the distribution of schoolchildren and schools near environmental hazards. In Los Angeles, minority students in LAUSD are more likely than their white counterparts to attend schools that are close to hazardous waste facilities.&lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5"&gt;5&lt;/a&gt;&lt;/sup&gt; Latinos are more likely to attend schools near hazardous facilities and face higher health risks associated with toxic air emissions.&lt;sup id="fnref:6"&gt;&lt;a class="footnote-ref" href="#fn:6"&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;A study based in Boston found that schools with disproportionately higher percentages of minority and economically disadvantaged schoolchildren are more likely to be located within a 1 mile radius Toxic Release Inventory (TRI) sites.&lt;sup id="fnref:7"&gt;&lt;a class="footnote-ref" href="#fn:7"&gt;7&lt;/a&gt;&lt;/sup&gt; The study also found a correlation between schools near TRI sites and low academic performance at the school level, as measured by English language art, math, and science Composite Performance Index scores.&lt;/p&gt;
+&lt;figure style='float: none; width: 100%'&gt;
+    &lt;div id='map2' class='map'&gt;&lt;/div&gt;
+    &lt;figcaption&gt;Hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Los Angeles County has a high concentration of public, charter, and private schools within a 1/4 mile radius of hazardous waste sites. When selecting the layers for charter schools and hazardous waste sites, you can also see a high concentration of charter schools in Los Angeles within a 1/4 mile radius of hazardous waste sites.&lt;/p&gt;
+&lt;h1&gt;&lt;strong&gt;Advancing solutions from multiple angles.&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Policy solutions:&lt;/em&gt; There have been two bills in previous legislative sessions that have tried to fix this gap in regulation: Assembly Bill 762 (Lee, 2021) and AB 2214 (Garcia, 2022).&lt;sup id="fnref:8"&gt;&lt;a class="footnote-ref" href="#fn:8"&gt;8&lt;/a&gt;&lt;/sup&gt; Both of these bills died in the suspense file in the Senate Appropriations Committee, in part due to the strong opposition from charter school lobbying.&lt;sup id="fnref:9"&gt;&lt;a class="footnote-ref" href="#fn:9"&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Although Cudahy Alliance for Justice successfully prevented the construction of a charter school, communities should not be forced to find an attorney and litigate a case every time a charter or private school is proposed on a former hazardous waste site. It is more likely that more of these situations will happen in environmental justice communities, where low-income working-class people are unable to stay abreast of new school projects in their neighborhood and unable to obtain an attorney to challenge projects. Legislative change is possible, and needed, in order to protect communities across the State.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Land use planning:&lt;/em&gt; Decades of racist land use planning and practices such as redlining resulted in low-income communities and communities of color living with an overconcentration of industrial activity. Along with the siting of hazardous waste facilities near homes, environmental justice communities also live closer to more cleanup sites. State agencies, like the Department of Toxic Substances Control, to implement regulations that consider the cumulative impacts in a community when new permit applications for hazardous waste facilities are considered. Although Senate Bill 673 was signed into law in 2015, DTSC has not yet finalized the regulatory process that would add permit criteria to new facilities and establish setbacks to protect sensitive receptors from facilities.&lt;sup id="fnref:10"&gt;&lt;a class="footnote-ref" href="#fn:10"&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Affordable, safe housing and other community-centered solutions:&lt;/em&gt; Schools are not the only sensitive receptors being sited near or on contaminated sites. Over the past decade, California's housing crisis has also solidified connections between the need to locate affordable housing away from toxic or polluted land. Land use planners and decisionmakers should require every new housing project to undergo robust environmental review to avoid placing housing on or near contaminated land before adequate cleanup is complete.&lt;sup id="fnref:11"&gt;&lt;a class="footnote-ref" href="#fn:11"&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Addressing housing quality issues also requires community-led and community-centered land use planning, so that those most impacted can provide the solutions to improve their qualities of life including investment to critical infrastructure such as clean drinking water and sanitation systems, climate resilient homes, access to green spaces, and robust anti-displacement and anti-gentrification policies.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;[A group of people holding signs Description automatically generated with medium confidence]: media/image1.jpg {width="4.454545056867891in" height="2.409834864391951in"}
+  [1]: media/image2.png {width="1.4415583989501313in" height="1.9512806211723535in"}
+  [2]: media/image3.png {width="4.40625in" height="2.6770833333333335in"}&lt;/p&gt;
+&lt;!-- This content manually migrated from https://github.com/gluesolutions/gluesolutions.github.io/blob/main/index.html --&gt;
+
+&lt;script type="text/javascript" src="/calenviroscreen.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/hzw_sites.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/hzw_near_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/public_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/charter_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/private_schools.geojson"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="/leaflet-heat.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+    const map1 = L.map('map1').setView([33.94, -118.24], 10);
+
+    const tiles1 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map1);
+
+
+    const map2 = L.map('map2').setView([33.94, -118.24], 10);
+    const tiles2 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map2);
+
+    const map3 = L.map('map3').setView([34.00, -118.20], 13);
+    const tiles3 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map3);
+
+
+    // control that shows state info on hover
+    const info1 = L.control();
+    const info2 = L.control();
+
+    info1.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        info1.showbasic();
+        return this._div;
+    };
+    var selected1 = null;
+
+    info2.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        info2.showbasic();
+        return this._div;
+    };
+    var selected2 = null;
+
+
+    info1.showfull = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+        var hzwFocus = hzwSites.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;th&gt;Project Name&lt;/th&gt;&lt;th&gt;Address&lt;/th&gt;&lt;th&gt;Site Type&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Past Uses&lt;/th&gt;";
+        for(let key in hzwFocus)
+        {
+            HTML += "&lt;tr&gt;&lt;td&gt;"+hzwFocus[key].properties.PROJECT_NAME+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.ADDRESS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.SITE_TYPE+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.STATUS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.PAST_USES+"&lt;/td&gt;&lt;/tr&gt;";
+        }
+        HTML += "&lt;/tr&gt;&lt;/table&gt;";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info1.showbasic = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+
+        var hzwFocus = hzwSites.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt; &lt;br&gt; There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+
+    info2.showfull = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+        var hzwFocus = hzwSitesNear.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;th&gt;Project Name&lt;/th&gt;&lt;th&gt;Address&lt;/th&gt;&lt;th&gt;Site Type&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Past Uses&lt;/th&gt;";
+        for(let key in hzwFocus)
+        {
+            HTML += "&lt;tr&gt;&lt;td&gt;"+hzwFocus[key].properties.PROJECT_NAME+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.ADDRESS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.SITE_TYPE+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.STATUS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.PAST_USES+"&lt;/td&gt;&lt;/tr&gt;";
+        }
+        HTML += "&lt;/tr&gt;&lt;/table&gt;";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info2.showbasic = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+
+        var hzwFocus = hzwSitesNear.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt; &lt;br&gt; There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info1.addTo(map1);
+    info2.addTo(map2);
+
+
+    function getColor(d) {
+        return d &gt; 0.90 ? '#573b88' :
+            d &gt; 0.77  ? '#834ba0' :
+            d &gt; 0.62  ? '#ad5fad' :
+            d &gt; 0.45  ? '#ce78b3' :
+            d &gt; 0.32   ? '#e597b9' :
+            d &gt; 0.21   ? '#f2b9c4' :
+            d &gt; 0   ? '#f9ddda' : '#D3D3D3';
+    }
+
+    function style(feature) {
+        return {
+            weight: 0.4,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7,
+            fillColor: getColor(feature.properties.BIPOC)
+        };
+    }
+
+    function highlightFeature1(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+        if (selected1 === null){
+            info1.showbasic(layer.feature.properties);
+            }
+    }
+
+    function highlightFeature2(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+        if (selected2 === null){
+            info2.showbasic(layer.feature.properties);
+            }
+    }
+    function highlightFeature3(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+    }
+
+    const geojson1 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature1
+    }).addTo(map1);
+
+    const geojson2 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature2
+    }).addTo(map2);
+
+    const geojson3 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature3
+    }).addTo(map3);
+
+
+    var publicSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#FFD700",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    var charterSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#4daf4a",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    var privateSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#386cb0",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+
+    const publicschools1 = L.geoJson(publicSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+
+    const publicschools2 = L.geoJson(publicSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    const charterschools1 = L.geoJson(charterSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, charterSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+    const charterschools2 = L.geoJson(charterSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, charterSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    const privateschools1 = L.geoJson(privateSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, privateSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+    const privateschools2 = L.geoJson(privateSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, privateSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    var geojsonMarkerOptions = {
+        radius: 2,
+        fillColor: "red",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    const hzw1 = L.geoJson(hzwSites, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map1);
+
+    const hzw2 = L.geoJson(hzwSitesNear, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    map3.createPane('heatmap');
+    map3.getPane('heatmap').style.zIndex = 650;
+
+
+    function getFirstCorrdinatesFromData(result){
+
+        var firstCordinate = [];
+        for (var i = 0; i &lt; result.length; i++) {
+            //alert(result[i].geometry.type)
+            if(result[i].geometry.type == 'MultiPolygon') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push(coordinates[0][0][0]);
+            }else if(result[i].geometry.type == 'Polygon') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push(coordinates[0][0]);
+            }else if(result[i].geometry.type == 'Point') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push([coordinates[1],coordinates[0]]);
+             }
+         }
+        return firstCordinate;
+        }
+    var arrayOfCoordinates=getFirstCorrdinatesFromData(hzwSites.features);
+
+
+    var heat = L.heatLayer(arrayOfCoordinates,
+                            {
+                            radius: 15,
+                            blur: 10,
+                            minOpacity: 0.3,
+                            max: 1,
+                            gradient: {0.2: '#ffffb2', 0.40: '#fecc5c', 0.60: '#fd8d3c', 0.75: '#f03b20', 0.85: '#bd0026'},
+                            pane: 'heatmap',
+                            },
+                    ).addTo(map3);
+
+
+    function resetHighlight1(e) {
+        const layer = e;
+        if (selected1 === null || selected1.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson1.resetStyle(layer);
+        }
+    }
+
+    function onClick1(e) {
+        const layer = e;
+        if (selected1 !== null) {
+            var previous = selected1;
+        }
+        info1.showfull(layer.feature.properties);
+        selected1 = layer;
+        if (previous &amp;&amp; selected1.feature.properties.Tract !== previous.feature.properties.Tract) {
+            resetHighlight1(previous);
+            }
+        else if (previous &amp;&amp; selected1.feature.properties.Tract == previous.feature.properties.Tract){
+            selected1 = null;
+            resetHighlight1(previous);
+            info1.showbasic(previous.feature.properties);
+
+        }
+    }
+
+    function onEachFeature1(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature1(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight1(e.target);
+            },
+            'click': function (e) {
+                onClick1(e.target);
+            }
+        });
+    }
+
+
+    function resetHighlight2(e) {
+        const layer = e;
+        if (selected2 === null || selected2.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson2.resetStyle(layer);
+        }
+    }
+
+    function onClick2(e) {
+        const layer = e;
+        if (selected2 !== null) {
+            var previous = selected2;
+        }
+        info2.showfull(layer.feature.properties);
+        selected2 = layer;
+        if (previous &amp;&amp; selected2.feature.properties.Tract !== previous.feature.properties.Tract) {
+            resetHighlight2(previous);
+            }
+        else if (previous &amp;&amp; selected2.feature.properties.Tract == previous.feature.properties.Tract){
+            selected2 = null;
+            resetHighlight2(previous);
+            info2.showbasic(previous.feature.properties);
+
+        }
+    }
+
+
+    function resetHighlight3(e) {
+        const layer = e;
+        geojson3.resetStyle(layer);
+    }
+
+    function onEachFeature1(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature1(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight1(e.target);
+            },
+            'click': function (e) {
+                onClick1(e.target);
+            }
+        });
+    }
+
+    function onEachFeature2(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature2(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight2(e.target);
+            },
+            'click': function (e) {
+                onClick2(e.target);
+            }
+        });
+    }
+
+
+    function onEachFeature3(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature3(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight3(e.target);
+            },
+        });
+    }
+
+
+
+    var baseMaps1 = {
+        "Basemap": tiles1,
+    };
+
+    var overlayMaps1 = {
+        "% BIPOC": geojson1,
+        "Hazardous Waste Sites": hzw1,
+        "Public Schools": publicschools1,
+        "Private Schools": privateschools1,
+        "Charter Schools": charterschools1,
+
+
+    };
+
+    map1.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Population data&lt;/a&gt;');
+    map1.attributionControl.addAttribution('&lt;a href="https://www.cde.ca.gov/schooldirectory/"&gt;Schools data&lt;/a&gt;')
+
+    var layerControl1 = L.control.layers(baseMaps1, overlayMaps1, {position: 'bottomleft'}).addTo(map1);
+
+    const legend1 = L.control({position: 'bottomright'});
+
+    legend1.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+
+        labels.push('&lt;i class="circle" style="background:red"&gt;&lt;/i&gt; Hazardous Waste Site')
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend1.addTo(map1);
+
+
+    var baseMaps2 = {
+        "Basemap": tiles2,
+    };
+
+    var overlayMaps2 = {
+        "% BIPOC": geojson2,
+        "Hazardous Waste Sites": hzw2,
+        "Public Schools": publicschools2,
+        "Private Schools": privateschools2,
+        "Charter Schools": charterschools2,
+
+
+    };
+
+    map2.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Census&lt;/a&gt;');
+    map2.attributionControl.addAttribution('&lt;a href="https://www.cde.ca.gov/schooldirectory/"&gt;Schools Info&lt;/a&gt;')
+
+    var layerControl2 = L.control.layers(baseMaps2, overlayMaps2, {position: 'bottomleft'}).addTo(map2);
+
+    const legend2 = L.control({position: 'bottomright'});
+
+    legend2.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+        labels.push('&lt;i class="circle" style="background:red"&gt;&lt;/i&gt; Hazardous Waste Site')
+        labels.push('&lt;i class="circle" style="background:#FFD700"&gt;&lt;/i&gt; Public Schools')
+        labels.push('&lt;i class="circle" style="background:#4daf4a"&gt;&lt;/i&gt; Charter Schools')
+        labels.push('&lt;i class="circle" style="background:#386cb0"&gt;&lt;/i&gt; Private Schools')
+
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend2.addTo(map2);
+
+
+    var baseMaps3 = {
+        "Basemap": tiles3,
+    };
+
+    var overlayMaps3 = {
+        "% BIPOC": geojson3,
+        "Density of Hazardous Waste Sites": heat,
+    };
+
+    map3.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Population data&lt;/a&gt;');
+
+    var layerControl3 = L.control.layers(baseMaps3, overlayMaps3, {position: 'bottomleft'}).addTo(map3);
+
+    const legend3 = L.control({position: 'bottomright'});
+
+    legend3.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+        labels.push('&lt;p&gt;')
+        labels.push('&lt;i style="background-image: linear-gradient(to right, red, orange)"&gt;&lt;/i&gt; Density of Waste Sites')
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend3.addTo(map3);
+&lt;/script&gt;
+
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;California Department of Toxic Substances Control&lt;a href="https://www.envirostor.dtsc.ca.gov/public/report_permitted_public"&gt;, &lt;em&gt;EnviroStor: Report of Permitted Hazardous Waste Facilities in California&lt;/em&gt;&lt;/a&gt; (last accessed on Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Meng Y., "Schools near Toxics Release Inventory Sites: An Environmental Justice Study for Schoolchildren in Boston, MA", &lt;em&gt;European Journal of Geography&lt;/em&gt;, [En ligne], Environnement, Nature, Paysage, document 941, mis en ligne le 29 avril 2020, consulté le 03 décembre 2022, http://journals.openedition.org/cybergeo/34682.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Choi H. S., Shim Y. K., Kaye W. E., Ryan P. B., 2006, \"Potential residential exposure to toxics release inventory chemicals during pregnancy and childhood brain cancer\", &lt;em&gt;Environmental Health Perspectives&lt;/em&gt;, Vol.114, No.7, 1113-1118.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;National Center for Education Statistics, 2018, [Fast Facts ]&lt;a href="last accessed Dec. 2, 2022"&gt;&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Pastor, M., Sadd, J. L., &amp;amp; Morello-Frosch, R. (2002). Who's Minding the Kids? Pollution, Public Schools, and Environmental Justice in Los Angeles. &lt;em&gt;Social Science Quarterly&lt;/em&gt;, &lt;em&gt;83&lt;/em&gt;(1), 263--280. http://www.jstor.org/stable/42956285.&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Id.&amp;#160;&lt;a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;
+&lt;p&gt;Meng Y., "Schools near Toxics Release Inventory Sites: An Environmental Justice Study for Schoolchildren in Boston, MA."&amp;#160;&lt;a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:8"&gt;
+&lt;p&gt;California Legislative Information, &lt;a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB762"&gt;AB 762- Hazardous emissions and substances: schoolsites: private and charter schools&lt;/a&gt; (last accessed Dec. 2, 2022); California Legislative Information, &lt;a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2214"&gt;AB 2214- California Environmental Quality Act: schoolsites: acquisition of property: schools districts, charter schools, and private schools&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:9"&gt;
+&lt;p&gt;California Senate Committee on Appropriations, &lt;a href="C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf"&gt;AB 2214 Bill Analysis&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:10"&gt;
+&lt;p&gt;California Department of Toxic Substances Control&lt;a href="https://dtsc.ca.gov/sb-673-permit-criteria-implementation/"&gt;, SB 673 Permit Criteria Implementation&lt;/a&gt; (last accessed Dec. 7, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:11"&gt;
+&lt;p&gt;See California Environmental Justice Alliance, &lt;a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/calgreenzones.org/wp-content/uploads/2021/10/CEJA_GZ-EHJP-Full-Platform-Final.pdf"&gt;Environmental and Housing Justice Platform&lt;/a&gt; (October 2021).&amp;#160;&lt;a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Reports"></category><category term="report"></category></entry><entry><title>The Story of Waste, Schools, and Justice in California</title><link href="https://ejhazardouswaste.com/report.html" rel="alternate"></link><published>2022-12-10T00:00:00-08:00</published><updated>2022-12-10T00:00:00-08:00</updated><author><name>Idalmis Vaquero</name></author><id>tag:ejhazardouswaste.com,2022-12-10:/report.html</id><summary type="html">&lt;p&gt;The full report on waste, schools, and justice in California&lt;/p&gt;</summary><content type="html">&lt;!-- This content manually migrated from https://github.com/gluesolutions/gluesolutions.github.io/blob/main/index.html --&gt;
+
+&lt;p&gt;&lt;head&gt;&lt;/p&gt;
+&lt;p&gt;&lt;link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/&gt;&lt;/p&gt;
+&lt;script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""&gt;&lt;/script&gt;
+
+&lt;style&gt;
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .leaflet-container {
+        height: 600px;
+        width: 800px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+&lt;/style&gt;
+
+&lt;style&gt;
+    .map {
+    width: 900px; 
+    height: 500px;
+    padding: 10px;
+    }
+.info { padding: 6px 8px; font: 12px/14px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+.leaflet-control{
+    max-height: 270px;
+    max-width: 460px;
+    overflow: auto;
+}
+.legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+.legend .circle{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  margin-left: 4px;
+
+  display: inline-block;  // added this line
+}
+
+
+&lt;/style&gt;
+
+&lt;p&gt;&lt;/head&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;Introduction of the problem&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3&gt;&lt;strong&gt;What is the connection between the environmental justice movement and hazardous waste facilities?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The environmental justice (EJ) movement grew in the 1970s from the group of residents in Warren County, North Carolina who fought against the disposal of polychlorinated biphenyls (PCBs) in their community.&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; This was one of the first prominent examples highlighting the disproportionate exposure to hazardous waste low-income communities of color face throughout the country. This fight also led to the seminal report by the United Church of Christ's Commission for Racial Justice titled &lt;em&gt;Toxic Wastes and Race in the United States&lt;/em&gt;.&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; This report, and other subsequent studies, have found that low-income communities and communities of color are more likely to live close to high-polluting industries, hazardous waste facilities, and incinerators.&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure&gt; 
+&lt;a href="/images/cbe_protest.jpg"&gt;&lt;img src="/images/cbe_protest.jpg" alt="A group of people in a line holding signs"&gt;&lt;/a&gt;
+&lt;figcaption&gt; Photo Courtesy: Sylvia Arredondo / &lt;a href="https://www.cbecal.org"&gt;Communities for a Better Environment&lt;/a&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hazardous waste continues to be a major issue for communities several decades after the start of the EJ movement. Hazardous waste facilities are regulated sites that are allowed to produce, treat, store, and dispose hazardous waste.&lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4"&gt;4&lt;/a&gt;&lt;/sup&gt; In addition to the over 100 permitted sites throughout California, there are also hundreds of sites throughout the State that are undergoing cleanup, investigation, or enforcement for known or suspected contamination issues.&lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5"&gt;5&lt;/a&gt;&lt;/sup&gt; These sites expose communities to a variety of chemicals that can increase the likelihood of cancer, respiratory diseases, neurological, reproductive, and developmental problems.&lt;sup id="fnref:6"&gt;&lt;a class="footnote-ref" href="#fn:6"&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;figure style='float: none; width: 100%'&gt;
+    &lt;div id='map1' class='map'&gt;&lt;/div&gt;
+    &lt;figcaption&gt;Percent of Black, Indigenous, people of color (BIPOC) compared to the percent of White people by census tract with the hazardous waste sites as identified by EnviroStor in the state.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3&gt;&lt;strong&gt;What is environmental racism?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The term environmental racism describes how Black, Indigenous, and communities of color (BIPOC) are disproportionately exposed to toxic and hazardous waste based on race. Environmental racism calls out the barriers, laws, regulations, and policies our government uses to allow the placement of and the unequal protection the government provides to BIPOC communities from the dangers of hazardous waste facilities.&lt;/p&gt;
+&lt;p&gt;In California, Southeast Los Angeles (SELA) serves as a prime example of environmental racism. SELA communities abut the City of Vernon, which is home to several hazardous waste facilities and several brownfields with known or potential contamination. These sites did not appear randomly but are rather a result of the intentional land use planning and laws which have allowed for multiple sources of hazardous waste to co-exist in or near BIPOC communities.&lt;/p&gt;
+&lt;p&gt;It is important to note that SELA is not the only example of environmental racism in the State or country.&lt;/p&gt;
+&lt;!-- Side by side comparison of the hazardous waste density map and the CalEnviroScreen zoom on the city of Vernon  --&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td style="width: 60%"&gt;
+            &lt;figure&gt;
+                &lt;div id='map3' class='map'&gt;&lt;/div&gt;
+                &lt;figcaption&gt;Hazardous waste density&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+        &lt;td style="width: 40%"&gt;
+            &lt;figure&gt;
+                &lt;a href="/images/calenviroscreen_vernon.png"&gt;&lt;img src='/images/calenviroscreen_vernon.png' alt='A view of the CalEnviroScreen portal centered on Vernon, CA'&gt;&lt;/a&gt;
+                &lt;figcaption&gt;CalEnviroScreen&lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=2&gt;
+            &lt;figure style='float: none; width: 100%; border: none'&gt;
+                &lt;figcaption&gt;
+                Left: map of the percentage of BIPOC people and density of hazardous waste sites located around the City of Vernon. Right: a snapshot of the same region showing its CalEnviroScreen 4.0 scores. CalEnviroScreen scores are calculated comparatively based on the pollution burden and population characteristics of census tracts throughout the State.
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/td&gt;
+    &lt;tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Although the City of Vernon has a low population to obtain an CalEnviroScreen 4.0 score, the surrounding census tracts have high CalEnviroScreen scores, which is in part due to the high pollution burden. The map on the left shows the high population of BIPOC around Vernon also live with higher densities of hazardous waste sites when compared to census tracts with lower population of BIPOC.&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;What does hazardous waste exposure look like for environmental justice communities today?&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Hazardous waste regulation continues to be an ongoing concern to environmental justice 
+Hazardous waste regulation continues to be an ongoing concern to environmental justice communities. Many environmental justice communities often see a gap in the regulation and enforcement of noncompliant hazardous waste facilities. Once a hazardous waste facility is closed, necessary cleanup is often delayed and/or to remediation methods or standards that are unacceptable to the surrounding community.&lt;/p&gt;
+&lt;p&gt;The following maps were created as part of the Climate Justice Design Fellowship at Harvard University. The data on the hazardous waste facilities and cleanup sites throughout the State was obtained through the Department of Toxic Substances Control's Envirostor database.&lt;sup id="fnref:7"&gt;&lt;a class="footnote-ref" href="#fn:7"&gt;7&lt;/a&gt;&lt;/sup&gt; School information was obtained through the State of California's Department of Education website.&lt;sup id="fnref:8"&gt;&lt;a class="footnote-ref" href="#fn:8"&gt;8&lt;/a&gt;&lt;/sup&gt; Racial and ethnic data was obtained through the 2020 U.S. Census data.&lt;sup id="fnref:9"&gt;&lt;a class="footnote-ref" href="#fn:9"&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;There are several data limitations. First, EnviroStor is not updated regularly and not all information about a site or facility is complete. EnviroStor is not a fully inclusive list of all sites with known or potential contamination. For example, sites on the State's Cortese List and not all Toxic Release Inventory facilities are on EnviroStor.&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;Why are schools' proximity to hazardous waste sites concerning?&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;School-age children spend a significant amount number of hours in schools. In 2021, nearly 50.7 million school-aged children spend at least six hours in schools across the country.&lt;sup id="fnref:10"&gt;&lt;a class="footnote-ref" href="#fn:10"&gt;10&lt;/a&gt;&lt;/sup&gt; Many of these schools are located in close proximity to or at time, built on top of, hazardous waste sites. As a result, the school locations are considered a key determinant of exposure to toxic pollutants.&lt;/p&gt;
+&lt;p&gt;Infants and children also have unique biological vulnerabilities and age-related patterns of exposure which make them more susceptible to experiencing health impacts.&lt;sup id="fnref:11"&gt;&lt;a class="footnote-ref" href="#fn:11"&gt;11&lt;/a&gt;&lt;/sup&gt; For example, children breath more air and consume more food and water per pound of body weight per day than an adult.&lt;sup id="fnref:12"&gt;&lt;a class="footnote-ref" href="#fn:12"&gt;12&lt;/a&gt;&lt;/sup&gt; Additionally, children are less able than adults to break down and excrete certain types of toxic compounds. Children also have more years of life than most adults and therefore have more time to develop chronic health conditions that could stem from early exposures.&lt;sup id="fnref:13"&gt;&lt;a class="footnote-ref" href="#fn:13"&gt;13&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Environmental justice studies have found race and class inequities in the distribution of schoolchildren and schools near environmental hazards. In Los Angeles, minority students in LAUSD are more likely than their white counterparts to attend schools that are close to hazardous waste facilities.&lt;sup id="fnref:14"&gt;&lt;a class="footnote-ref" href="#fn:14"&gt;14&lt;/a&gt;&lt;/sup&gt; Latinos are more likely to attend schools near hazardous facilities and face higher health risks associated with toxic air emissions.&lt;sup id="fnref:15"&gt;&lt;a class="footnote-ref" href="#fn:15"&gt;15&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;A study based in Boston found that schools with disproportionately higher percentages of minority and economically disadvantaged schoolchildren are more likely to be located within a 1 mile radius Toxic Release Inventory (TRI) sites.&lt;sup id="fnref:16"&gt;&lt;a class="footnote-ref" href="#fn:16"&gt;16&lt;/a&gt;&lt;/sup&gt; The study also found a correlation between schools near TRI sites and low academic performance at the school level, as measured by English language art, math, and science Composite Performance Index scores.&lt;/p&gt;
+&lt;p&gt;Los Angeles County has a high concentration of public, charter, and private schools within a 1/4 mile radius of hazardous waste sites. When selecting the layers for charter schools and hazardous waste sites, you can also see a high concentration of charter schools in Los Angeles within a 1/4 mile radius of hazardous waste sites.&lt;/p&gt;
+&lt;figure style='float: none; width: 100%'&gt;
+    &lt;div id='map2' class='map'&gt;&lt;/div&gt;
+    &lt;figcaption&gt;Hazardous waste sites within a ¼ mile radius of all public, charter, and private schools in the State.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2&gt;&lt;strong&gt;Current hazardous waste laws do not protect students attending charter and private schools.&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;There are certain environmental requirements public schools must consider when deciding where to site new public schools to ensure that new school sites will not endanger the health of students and school employees.&lt;sup id="fnref:17"&gt;&lt;a class="footnote-ref" href="#fn:17"&gt;17&lt;/a&gt;&lt;/sup&gt; At different points throughout the selection and before the purchase of a new school site, school districts are required to follow the California Environmental Quality Act process and obtain approvals on the adequacy of the site from the California Department of Toxic Substances Control and the California Department of Education.&lt;sup id="fnref:18"&gt;&lt;a class="footnote-ref" href="#fn:18"&gt;18&lt;/a&gt;&lt;/sup&gt; Existing law requires prohibits school districts from locating public schools on land that was previously a hazardous waste disposal site or solid waste disposal site unless the waste has been removed.&lt;sup id="fnref:19"&gt;&lt;a class="footnote-ref" href="#fn:19"&gt;19&lt;/a&gt;&lt;/sup&gt; If a school site is within 500 feet from a freeway or other busy traffic corridor, the school district must also show that the air quality at the propose site will not create the short-term nor long-term health impacts on students.&lt;sup id="fnref:20"&gt;&lt;a class="footnote-ref" href="#fn:20"&gt;20&lt;/a&gt;&lt;/sup&gt; A school district may still be able to site a school that does not meet either of these requirements if it can show that there are no other suitable sites and that there is a severe storage of sites.&lt;sup id="fnref:21"&gt;&lt;a class="footnote-ref" href="#fn:21"&gt;21&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Existing law requires school districts to conduct a Phase I environmental assessment or may elect to proceed with prepare a Preliminary Environmental Assessment, sometimes referred to as a Preliminary Endangerment Assessment. A Phase I environmental assessment investigates whether the release of hazardous material has occurred on the site, if there is a threat of a release of hazardous materials, or if there is a naturally occurring hazardous material is present on the proposed schoolsite.&lt;sup id="fnref:22"&gt;&lt;a class="footnote-ref" href="#fn:22"&gt;22&lt;/a&gt;&lt;/sup&gt; A school district can elect to conduct a Preliminary Environmental Assessment of a proposed school site if there is already known contamination on the proposed site.&lt;sup id="fnref:23"&gt;&lt;a class="footnote-ref" href="#fn:23"&gt;23&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In addition to the preparation of a Preliminary Environmental Assessment, school districts are also required to prepare an environmental impact report (EIR) or a negative declaration (ND) under the California Environmental Quality Act and make both documents available for a 30-day comment period.&lt;sup id="fnref:24"&gt;&lt;a class="footnote-ref" href="#fn:24"&gt;24&lt;/a&gt;&lt;/sup&gt; If the Preliminary Environmental Assessment identifies significant contamination, the school district can elect to drop the proposed school site or clean up the contamination under a DTSC Voluntary Cleanup Agreement or School Cleanup Agreement.&lt;/p&gt;
+&lt;p&gt;These requirements, which are meant to protect the health and well-being of students, do not apply to charter and private schools. Charter schools are not required to comply with these requirements unless they receive state school bond funds. Private school are only typically required to comply with health and safety provisions they are explicitly required to follow under the Education Code.&lt;sup id="fnref:25"&gt;&lt;a class="footnote-ref" href="#fn:25"&gt;25&lt;/a&gt;&lt;/sup&gt; In the 2020-2021 school year, students in charter schools made up 11.5 percent of the public school student population in California.&lt;sup id="fnref:26"&gt;&lt;a class="footnote-ref" href="#fn:26"&gt;26&lt;/a&gt;&lt;/sup&gt; In LAUSD, for example, 1 in every 5 public school students attend a charter school.&lt;sup id="fnref:27"&gt;&lt;a class="footnote-ref" href="#fn:27"&gt;27&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;This lack of regulation on charter and private schools means that a school is more likely to get built on contaminated site without proper assessment of the safety or health impacts this constant exposure could have on students, teachers, and school staff.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Case study: Cudahy Alliance for Justice's fight against KIPP SoCal Public Schools.&lt;/strong&gt;&lt;/h3&gt;
+&lt;figure&gt; 
+&lt;a href="/images/cbe_fence.jpg"&gt;&lt;img src="/images/cbe_fence.jpg" alt="Four people standing outside a fence"&gt;&lt;/a&gt;
+&lt;figcaption&gt; Photo Courtesy: &lt;a href="https://www.cbecal.org"&gt;Communities for a Better Environment&lt;/a&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Just 11 miles southeast from downtown Los Angeles, residents in the City of Cudahy recently fought these gaps in regulation. Cudahy is in the 97^th^ percentile of communities most impacted by pollution in the State and is considered an environmental justice community. Despite being a city less than 2 miles, it has more than 30 hazardous waste facilities and cleanup sites. Of the five schools in Cudahy, two are built on or adjacent to hazardous waste sites.&lt;sup id="fnref:28"&gt;&lt;a class="footnote-ref" href="#fn:28"&gt;28&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In 2020, KIPP SoCal Public Schools had plans to build a new elementary school on a former industrial site used for 90 years to manufacture metal and a long legacy of contamination.&lt;sup id="fnref:29"&gt;&lt;a class="footnote-ref" href="#fn:29"&gt;29&lt;/a&gt;&lt;/sup&gt; Cudahy Alliance for Justice and local residents sued the City of Cudahy for its approval of the KIPP school as a project that does not require an EIR under the California Environmental Quality Act. Because the project was categorized as a ministerial project, rather than discretionary project, KIPP was not legally obligated to conduct an EIR or make any effort to remediate the potential school site. Additional oversight by DTSC would have likely ensured that KIPP would have conducted the crucial studies and remediation necessary.&lt;/p&gt;
+&lt;p&gt;In 2022, a superior court judge ruled in favor of Cudahy Alliance for Justice and local residents and required that the City complete an EIR for the project and properly clean up the site with DTSC oversight.&lt;sup id="fnref:30"&gt;&lt;a class="footnote-ref" href="#fn:30"&gt;30&lt;/a&gt;&lt;/sup&gt; In fall of 2022, KIPP decided to abandon plans to build the school in Cudahy.&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;Advancing solutions from multiple angles.&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Policy solutions:&lt;/em&gt; There have been two bills in previous legislative sessions that have tried to fix this gap in regulation: Assembly Bill 762 (Lee, 2021) and AB 2214 (Garcia, 2022).&lt;sup id="fnref:31"&gt;&lt;a class="footnote-ref" href="#fn:31"&gt;31&lt;/a&gt;&lt;/sup&gt; Both of these bills died in the suspense file in the Senate Appropriations Committee, in part due to the strong opposition from charter school lobbying.&lt;sup id="fnref:32"&gt;&lt;a class="footnote-ref" href="#fn:32"&gt;32&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;![][5]Although Cudahy Alliance for Justice successfully prevented the construction of a charter school, communities should not be forced to find an attorney and litigate a case every time a charter or private school is proposed on a former hazardous waste site. It is more likely that more of these situations will happen in environmental justice communities, where low-income working-class people are unable to stay abreast of new school projects in their neighborhood and unable to obtain an attorney to challenge projects. Legislative change is possible, and needed, in order to protect communities across the State.&lt;/p&gt;
+&lt;figure&gt; 
+&lt;a href="/images/cbe_stop_racism.jpg"&gt;&lt;img src="/images/cbe_stop_racism.jpg" alt="A group of people outside a building holding signs that say 'Stop Racism' and '#WeAreJustTryingToBreathe"&gt;&lt;/a&gt;
+&lt;figcaption&gt; Photo Courtesy: &lt;a href="https://www.cbecal.org"&gt;Communities for a Better Environment&lt;/a&gt; &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;Land use planning:&lt;/em&gt; Decades of racist land use planning and practices such as redlining resulted in low-income communities and communities of color living with an overconcentration of industrial activity. Along with the siting of hazardous waste facilities near homes, environmental justice communities also live closer to more cleanup sites. State agencies, like the Department of Toxic Substances Control, to implement regulations that consider the cumulative impacts in a community when new permit applications for hazardous waste facilities are considered. Although Senate Bill 673 was signed into law in 2015, DTSC has not yet finalized the regulatory process that would add permit criteria to new facilities and establish setbacks to protect sensitive receptors from facilities.[^33]&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Affordable, safe housing and other community-centered solutions:&lt;/em&gt; Schools are not the only sensitive receptors being sited near or on contaminated sites. Over the past decade, California's housing crisis has also solidified connections between the need to locate affordable housing away from toxic or polluted land. Land use planners and decisionmakers should require every new housing project to undergo robust environmental review to avoid placing housing on or near contaminated land before adequate cleanup is complete.[^34]&lt;/p&gt;
+&lt;p&gt;Addressing housing quality issues also requires community-led and community-centered land use planning, so that those most impacted can provide the solutions to improve their qualities of life including investment to critical infrastructure such as clean drinking water and sanitation systems, climate resilient homes, access to green spaces, and robust anti-displacement and anti-gentrification policies.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;!-- This content manually migrated from https://github.com/gluesolutions/gluesolutions.github.io/blob/main/index.html --&gt;
+
+&lt;script type="text/javascript" src="/calenviroscreen.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/hzw_sites.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/hzw_near_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/public_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/charter_schools.geojson"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/private_schools.geojson"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="/leaflet-heat.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+
+    const map1 = L.map('map1').setView([33.94, -118.24], 10);
+
+    const tiles1 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map1);
+
+
+    const map2 = L.map('map2').setView([33.94, -118.24], 10);
+    const tiles2 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map2);
+
+    const map3 = L.map('map3').setView([34.00, -118.20], 13);
+    const tiles3 = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 20,
+        attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors &amp;copy; &lt;a href="https://carto.com/attributions"&gt;CARTO&lt;/a&gt;',
+    }).addTo(map3);
+
+
+    // control that shows state info on hover
+    const info1 = L.control();
+    const info2 = L.control();
+
+    info1.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        info1.showbasic();
+        return this._div;
+    };
+    var selected1 = null;
+
+    info2.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        info2.showbasic();
+        return this._div;
+    };
+    var selected2 = null;
+
+
+    info1.showfull = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+        var hzwFocus = hzwSites.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;th&gt;Project Name&lt;/th&gt;&lt;th&gt;Address&lt;/th&gt;&lt;th&gt;Site Type&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Past Uses&lt;/th&gt;";
+        for(let key in hzwFocus)
+        {
+            HTML += "&lt;tr&gt;&lt;td&gt;"+hzwFocus[key].properties.PROJECT_NAME+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.ADDRESS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.SITE_TYPE+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.STATUS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.PAST_USES+"&lt;/td&gt;&lt;/tr&gt;";
+        }
+        HTML += "&lt;/tr&gt;&lt;/table&gt;";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info1.showbasic = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+
+        var hzwFocus = hzwSites.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt; &lt;br&gt; There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+
+    info2.showfull = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+        var hzwFocus = hzwSitesNear.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt;&lt;br&gt;&lt;table&gt;&lt;th&gt;Project Name&lt;/th&gt;&lt;th&gt;Address&lt;/th&gt;&lt;th&gt;Site Type&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Past Uses&lt;/th&gt;";
+        for(let key in hzwFocus)
+        {
+            HTML += "&lt;tr&gt;&lt;td&gt;"+hzwFocus[key].properties.PROJECT_NAME+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.ADDRESS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.SITE_TYPE+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.STATUS+"&lt;/td&gt;&lt;td&gt;"+hzwFocus[key].properties.PAST_USES+"&lt;/td&gt;&lt;/tr&gt;";
+        }
+        HTML += "&lt;/tr&gt;&lt;/table&gt;";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info2.showbasic = function (props) {
+        const tract = props ? props.Tract : 0;
+
+        const approxLoc = props ? props.ApproxLoc : "";
+
+        var hzwFocus = hzwSitesNear.features.filter(function (el) {
+            return el.properties.Tract == tract;
+        });
+
+        var HTML = "&lt;b&gt;Hazardous Waste Sites for "+approxLoc+"&lt;/b&gt; &lt;br&gt; There are "+hzwFocus.length+" sites in this census tract. Click on the tract for the full information about these sites.";
+        const contents = hzwFocus.length ? HTML : 'Hover over/Click a census tract';
+        this._div.innerHTML = contents;
+    };
+
+    info1.addTo(map1);
+    info2.addTo(map2);
+
+
+    function getColor(d) {
+        return d &gt; 0.90 ? '#573b88' :
+            d &gt; 0.77  ? '#834ba0' :
+            d &gt; 0.62  ? '#ad5fad' :
+            d &gt; 0.45  ? '#ce78b3' :
+            d &gt; 0.32   ? '#e597b9' :
+            d &gt; 0.21   ? '#f2b9c4' :
+            d &gt; 0   ? '#f9ddda' : '#D3D3D3';
+    }
+
+    function style(feature) {
+        return {
+            weight: 0.4,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7,
+            fillColor: getColor(feature.properties.BIPOC)
+        };
+    }
+
+    function highlightFeature1(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+        if (selected1 === null){
+            info1.showbasic(layer.feature.properties);
+            }
+    }
+
+    function highlightFeature2(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+        if (selected2 === null){
+            info2.showbasic(layer.feature.properties);
+            }
+    }
+    function highlightFeature3(e) {
+        const layer = e;
+
+        layer.setStyle({
+            weight: 5,
+            color: '#666',
+            dashArray: '',
+            fillOpacity: 0.7
+        });
+
+    }
+
+    const geojson1 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature1
+    }).addTo(map1);
+
+    const geojson2 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature2
+    }).addTo(map2);
+
+    const geojson3 = L.geoJson(censusData, {
+        style,
+        onEachFeature: onEachFeature3
+    }).addTo(map3);
+
+
+    var publicSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#FFD700",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    var charterSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#4daf4a",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    var privateSchoolMarkerOptions = {
+        radius: 2,
+        fillColor: "#386cb0",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+
+    const publicschools1 = L.geoJson(publicSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+
+    const publicschools2 = L.geoJson(publicSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, publicSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    const charterschools1 = L.geoJson(charterSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, charterSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+    const charterschools2 = L.geoJson(charterSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, charterSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    const privateschools1 = L.geoJson(privateSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, privateSchoolMarkerOptions);
+        }
+    });//.addTo(map1);
+
+    const privateschools2 = L.geoJson(privateSchools, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, privateSchoolMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    var geojsonMarkerOptions = {
+        radius: 2,
+        fillColor: "red",
+        color: "#000",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    const hzw1 = L.geoJson(hzwSites, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map1);
+
+    const hzw2 = L.geoJson(hzwSitesNear, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map2);
+
+
+    map3.createPane('heatmap');
+    map3.getPane('heatmap').style.zIndex = 650;
+
+
+    function getFirstCorrdinatesFromData(result){
+
+        var firstCordinate = [];
+        for (var i = 0; i &lt; result.length; i++) {
+            //alert(result[i].geometry.type)
+            if(result[i].geometry.type == 'MultiPolygon') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push(coordinates[0][0][0]);
+            }else if(result[i].geometry.type == 'Polygon') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push(coordinates[0][0]);
+            }else if(result[i].geometry.type == 'Point') {
+                let coordinates = result[i].geometry.coordinates;
+                firstCordinate.push([coordinates[1],coordinates[0]]);
+             }
+         }
+        return firstCordinate;
+        }
+    var arrayOfCoordinates=getFirstCorrdinatesFromData(hzwSites.features);
+
+
+    var heat = L.heatLayer(arrayOfCoordinates,
+                            {
+                            radius: 15,
+                            blur: 10,
+                            minOpacity: 0.3,
+                            max: 1,
+                            gradient: {0.2: '#ffffb2', 0.40: '#fecc5c', 0.60: '#fd8d3c', 0.75: '#f03b20', 0.85: '#bd0026'},
+                            pane: 'heatmap',
+                            },
+                    ).addTo(map3);
+
+
+    function resetHighlight1(e) {
+        const layer = e;
+        if (selected1 === null || selected1.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson1.resetStyle(layer);
+        }
+    }
+
+    function onClick1(e) {
+        const layer = e;
+        if (selected1 !== null) {
+            var previous = selected1;
+        }
+        info1.showfull(layer.feature.properties);
+        selected1 = layer;
+        if (previous &amp;&amp; selected1.feature.properties.Tract !== previous.feature.properties.Tract) {
+            resetHighlight1(previous);
+            }
+        else if (previous &amp;&amp; selected1.feature.properties.Tract == previous.feature.properties.Tract){
+            selected1 = null;
+            resetHighlight1(previous);
+            info1.showbasic(previous.feature.properties);
+
+        }
+    }
+
+    function onEachFeature1(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature1(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight1(e.target);
+            },
+            'click': function (e) {
+                onClick1(e.target);
+            }
+        });
+    }
+
+
+    function resetHighlight2(e) {
+        const layer = e;
+        if (selected2 === null || selected2.feature.properties.Tract !== layer.feature.properties.Tract) {
+            geojson2.resetStyle(layer);
+        }
+    }
+
+    function onClick2(e) {
+        const layer = e;
+        if (selected2 !== null) {
+            var previous = selected2;
+        }
+        info2.showfull(layer.feature.properties);
+        selected2 = layer;
+        if (previous &amp;&amp; selected2.feature.properties.Tract !== previous.feature.properties.Tract) {
+            resetHighlight2(previous);
+            }
+        else if (previous &amp;&amp; selected2.feature.properties.Tract == previous.feature.properties.Tract){
+            selected2 = null;
+            resetHighlight2(previous);
+            info2.showbasic(previous.feature.properties);
+
+        }
+    }
+
+
+    function resetHighlight3(e) {
+        const layer = e;
+        geojson3.resetStyle(layer);
+    }
+
+    function onEachFeature1(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature1(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight1(e.target);
+            },
+            'click': function (e) {
+                onClick1(e.target);
+            }
+        });
+    }
+
+    function onEachFeature2(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature2(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight2(e.target);
+            },
+            'click': function (e) {
+                onClick2(e.target);
+            }
+        });
+    }
+
+
+    function onEachFeature3(feature, layer) {
+        layer.on({
+            'mouseover': function (e) {
+                highlightFeature3(e.target);
+            },
+            'mouseout': function (e) {
+                resetHighlight3(e.target);
+            },
+        });
+    }
+
+
+
+    var baseMaps1 = {
+        "Basemap": tiles1,
+    };
+
+    var overlayMaps1 = {
+        "% BIPOC": geojson1,
+        "Hazardous Waste Sites": hzw1,
+        "Public Schools": publicschools1,
+        "Private Schools": privateschools1,
+        "Charter Schools": charterschools1,
+
+
+    };
+
+    map1.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Population data&lt;/a&gt;');
+    map1.attributionControl.addAttribution('&lt;a href="https://www.cde.ca.gov/schooldirectory/"&gt;Schools data&lt;/a&gt;')
+
+    var layerControl1 = L.control.layers(baseMaps1, overlayMaps1, {position: 'bottomleft'}).addTo(map1);
+
+    const legend1 = L.control({position: 'bottomright'});
+
+    legend1.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+
+        labels.push('&lt;i class="circle" style="background:red"&gt;&lt;/i&gt; Hazardous Waste Site')
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend1.addTo(map1);
+
+
+    var baseMaps2 = {
+        "Basemap": tiles2,
+    };
+
+    var overlayMaps2 = {
+        "% BIPOC": geojson2,
+        "Hazardous Waste Sites": hzw2,
+        "Public Schools": publicschools2,
+        "Private Schools": privateschools2,
+        "Charter Schools": charterschools2,
+
+
+    };
+
+    map2.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Census&lt;/a&gt;');
+    map2.attributionControl.addAttribution('&lt;a href="https://www.cde.ca.gov/schooldirectory/"&gt;Schools Info&lt;/a&gt;')
+
+    var layerControl2 = L.control.layers(baseMaps2, overlayMaps2, {position: 'bottomleft'}).addTo(map2);
+
+    const legend2 = L.control({position: 'bottomright'});
+
+    legend2.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+        labels.push('&lt;i class="circle" style="background:red"&gt;&lt;/i&gt; Hazardous Waste Site')
+        labels.push('&lt;i class="circle" style="background:#FFD700"&gt;&lt;/i&gt; Public Schools')
+        labels.push('&lt;i class="circle" style="background:#4daf4a"&gt;&lt;/i&gt; Charter Schools')
+        labels.push('&lt;i class="circle" style="background:#386cb0"&gt;&lt;/i&gt; Private Schools')
+
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend2.addTo(map2);
+
+
+    var baseMaps3 = {
+        "Basemap": tiles3,
+    };
+
+    var overlayMaps3 = {
+        "% BIPOC": geojson3,
+        "Density of Hazardous Waste Sites": heat,
+    };
+
+    map3.attributionControl.addAttribution('&lt;a href="http://census.gov/"&gt;Population data&lt;/a&gt;');
+
+    var layerControl3 = L.control.layers(baseMaps3, overlayMaps3, {position: 'bottomleft'}).addTo(map3);
+
+    const legend3 = L.control({position: 'bottomright'});
+
+    legend3.onAdd = function (map) {
+
+        const div = L.DomUtil.create('div', 'info legend');
+        const grades = [0, 0.21, 0.32, 0.45, 0.62, 0.77, 0.90];
+        const labels = ["&lt;b&gt; % BIPOC &lt;/b&gt;"];
+        let from, to;
+
+        for (let i = 0; i &lt; grades.length; i++) {
+            from = grades[i];
+            to = grades[i + 1];
+
+            labels.push(`&lt;i style="background:${getColor(from+0.01)}"&gt;&lt;/i&gt; ${from}${to ? `&amp;ndash;${to}` : '+'}`);
+        }
+        labels.push('&lt;p&gt;')
+        labels.push('&lt;i style="background-image: linear-gradient(to right, red, orange)"&gt;&lt;/i&gt; Density of Waste Sites')
+        div.innerHTML = labels.join('&lt;br&gt;');
+        return div;
+    };
+
+    legend3.addTo(map3);
+&lt;/script&gt;
+
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;United Church of Christ, &lt;a href="https://www.ucc.org/what-we-do/justice-local-church-ministries/justice/faithful-action-ministries/environmental-justice/a_movement_is_born_environmental_justice_and_the_ucc/"&gt;&lt;em&gt;A Movement Is Born: Environmental Justice and the UCC&lt;/em&gt;&lt;/a&gt; (last accessed December 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;United Church of Christ: Commission for Racial Justice, &lt;em&gt;Toxic Waste and Race in the United States&lt;/em&gt; (1987) https://new.uccfiles.com/pdf/ToxicWastes&amp;amp;Race.pdf.&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;&lt;em&gt;See generally&lt;/em&gt; Maantay J., Chakraborty J., and Brender J., 2010, &lt;em&gt;Proximity to Environmental Hazards: Environmental Justice and Adverse Health Outcomes&lt;/em&gt;, Environmental Protection Agency, Washington, DC; Brender J., Maantay J., Chakraborty J., 2011, \"Residential proximity to environmental hazards and adverse health outcomes\", &lt;em&gt;American Journal of Public Health&lt;/em&gt;, Vol.101, 37-52; Johnson R., Ramsey-White K., Fuller C.H., 2016, \"Socio-demographic differences in Toxic Release Inventory siting and emissions in Metro Atlanta\", &lt;em&gt;International Journal of Environmental Research and Public Health&lt;/em&gt;, Vol.13, No.8, 747-759.&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;California Department of Toxic Substances Control&lt;a href="https://www.envirostor.dtsc.ca.gov/public/report_permitted_public"&gt;, &lt;em&gt;EnviroStor: Report of Permitted Hazardous Waste Facilities in California&lt;/em&gt;&lt;/a&gt; (last accessed on Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;Meng Y., "Schools near Toxics Release Inventory Sites: An Environmental Justice Study for Schoolchildren in Boston, MA", &lt;em&gt;European Journal of Geography&lt;/em&gt;, [En ligne], Environnement, Nature, Paysage, document 941, mis en ligne le 29 avril 2020, consulté le 03 décembre 2022, http://journals.openedition.org/cybergeo/34682.&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Choi H. S., Shim Y. K., Kaye W. E., Ryan P. B., 2006, \"Potential residential exposure to toxics release inventory chemicals during pregnancy and childhood brain cancer\", &lt;em&gt;Environmental Health Perspectives&lt;/em&gt;, Vol.114, No.7, 1113-1118.&amp;#160;&lt;a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:7"&gt;&lt;/li&gt;
+&lt;li id="fn:8"&gt;&lt;/li&gt;
+&lt;li id="fn:9"&gt;&lt;/li&gt;
+&lt;li id="fn:10"&gt;
+&lt;p&gt;National Center for Education Statistics, 2018, &lt;a href="https://nces.ed.gov/fastfacts/display.asp?id=372"&gt;Fast Facts &lt;/a&gt;(last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:11"&gt;
+&lt;p&gt;Landrigan P.J., Rauh V.A., Galvez M.P., 2010, "Environmental justice and the health of children", Mt Sinai J Med. Mar-Apr;77(2):178-87.&amp;#160;&lt;a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:12"&gt;
+&lt;p&gt;Id.&amp;#160;&lt;a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:13"&gt;
+&lt;p&gt;Id.&amp;#160;&lt;a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:14"&gt;
+&lt;p&gt;Pastor, M., Sadd, J. L., &amp;amp; Morello-Frosch, R. (2002). Who's Minding the Kids? Pollution, Public Schools, and Environmental Justice in Los Angeles. &lt;em&gt;Social Science Quarterly&lt;/em&gt;, &lt;em&gt;83&lt;/em&gt;(1), 263--280. http://www.jstor.org/stable/42956285.&amp;#160;&lt;a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:15"&gt;
+&lt;p&gt;Id.&amp;#160;&lt;a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:16"&gt;
+&lt;p&gt;Meng Y., "Schools near Toxics Release Inventory Sites: An Environmental Justice Study for Schoolchildren in Boston, MA."&amp;#160;&lt;a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:17"&gt;
+&lt;p&gt;Education Code section 17212 et seq.&amp;#160;&lt;a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:18"&gt;
+&lt;p&gt;California Senate Committee on Education, &lt;a href="C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Education%20(1).pdf"&gt;AB 2214 Bill Analysis&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:19"&gt;
+&lt;p&gt;Education Code section 17213(a)(1).&amp;#160;&lt;a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:20"&gt;
+&lt;p&gt;Education Code section 17213(c)(2)(C).&amp;#160;&lt;a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:21"&gt;
+&lt;p&gt;Education Code section 17213(c)(2)(D).&amp;#160;&lt;a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:22"&gt;
+&lt;p&gt;Education Code section 17213.1(a).&amp;#160;&lt;a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:23"&gt;
+&lt;p&gt;Education Code section 17213.1(a)(4)(B).&amp;#160;&lt;a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:24"&gt;
+&lt;p&gt;Education Code section 17213.1(a)(4)(B).&amp;#160;&lt;a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:25"&gt;
+&lt;p&gt;California Senate Committee on Education, &lt;a href="C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Education%20(1).pdf"&gt;AB 2214 Bill Analysis&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:26"&gt;
+&lt;p&gt;California Department of Education, &lt;a href="https://www.cde.ca.gov/sp/ch/cefcharterschools.asp"&gt;Charter Schools- CalEdFacts&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:27"&gt;
+&lt;p&gt;EdSource, &lt;a href="https://edsource.org/2022/a-new-chapter-for-charter-schools-in-california-as-enrollment-drops-for-first-time-in-3-decades/670868"&gt;A new chapter for charter schools in California as enrollment drops for the first time in 3 decades&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 27 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:28"&gt;
+&lt;p&gt;Cudahy Alliance for Justice, &lt;em&gt;Press Release: Judge Rules That Approval of Elementary and Middle School on Hazardous Waste Site in Southeast L.A. was Unlawful&lt;/em&gt; (Jan. 20, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 28 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:29"&gt;
+&lt;p&gt;Larry Buhl, &lt;a href="https://capitalandmain.com/city-sued-for-letting-charter-school-dodge-environmental-rules-0204"&gt;City Sued for Letting Charter School Dodge Environmental Rules&lt;/a&gt;, CAPITAL &amp;amp; MAIN (Feb. 2, 2021).&amp;#160;&lt;a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 29 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:30"&gt;
+&lt;p&gt;Cudahy Alliance for Justice, &lt;em&gt;Press Release: Judge Rules That Approval of Elementary and Middle School on Hazardous Waste Site in Southeast L.A. was Unlawful&lt;/em&gt; (Jan. 20, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 30 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:31"&gt;
+&lt;p&gt;California Legislative Information, &lt;a href="https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB762"&gt;AB 762- Hazardous emissions and substances: schoolsites: private and charter schools&lt;/a&gt; (last accessed Dec. 2, 2022); California Legislative Information, &lt;a href="https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2214"&gt;AB 2214- California Environmental Quality Act: schoolsites: acquisition of property: schools districts, charter schools, and private schools&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:31" title="Jump back to footnote 31 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:32"&gt;
+&lt;p&gt;California Senate Committee on Appropriations, &lt;a href="C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf"&gt;AB 2214 Bill Analysis&lt;/a&gt; (last accessed Dec. 2, 2022).&amp;#160;&lt;a class="footnote-backref" href="#fnref:32" title="Jump back to footnote 32 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</content><category term="Reports"></category><category term="report"></category></entry></feed>
