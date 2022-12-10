@@ -13,3 +13,6 @@ To run the site locally, clone the repository, create a python virtual environme
 
 This site hosts maps which are dependent on geojson files developed by Glue Solutions. The `bash` script `sync_map_files.sh` can be used to pull the latest versions of these from the Glue Solutions repository.
 
+## Publishing
+
+This Pelican site instance was developed with `make`.  To publish, use `make publish` and then push the changed `docs` files to the repository.

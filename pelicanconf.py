@@ -92,7 +92,7 @@ DISPLAY_PAGES_ON_MENU = True
 MENUITEMS = (
     ('Full Report', '/report.html'),
     ('Executive Summary', '/exec-summary.html'),
-    ('About', '/pages/about.html'),
+    ('About', '/'),
 )
 
 BULRUSH_SHOW_SUMMARY = True
