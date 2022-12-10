@@ -1,10 +1,14 @@
 Title: The Story of Waste, Schools, and Justice in California
-slug: maps
-    
+Date: 2022-12-10 00:00
+Modified: 2022-12-10 00:00
+Category: Reports
+Slug: report
+Summary: The full report on waste, schools, and justice in California
+Tags: report
+Authors: Idalmis Vaquero
+Status: published
 
 {!+ content/extras/gluesolutions.github.io_map_leaflet_header.html !}
-
-# The Story of Hazardous Waste, Schools, and Environmental Justice in California
 
 ##  **Introduction of the problem**
 
