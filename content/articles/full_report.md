@@ -141,7 +141,7 @@ Addressing housing quality issues also requires community-led and community-cent
 
 [^17]: Education Code section 17212 et seq.
 
-[^18]: California Senate Committee on Education, [AB 2214 Bill Analysis](C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Education%20(1).pdf) (last accessed Dec. 2, 2022).
+[^18]: California Senate Committee on Education, AB 2214 Bill Analysis (last accessed Dec. 2, 2022).
 
 [^19]: Education Code section 17213(a)(1).
 
@@ -155,7 +155,7 @@ Addressing housing quality issues also requires community-led and community-cent
 
 [^24]: Education Code section 17213.1(a)(4)(B).
 
-[^25]: California Senate Committee on Education, [AB 2214 Bill Analysis](C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Education%20(1).pdf) (last accessed Dec. 2, 2022).
+[^25]: California Senate Committee on Education, AB 2214 Bill Analysis (last accessed Dec. 2, 2022).
 
 [^26]: California Department of Education, [Charter Schools- CalEdFacts](https://www.cde.ca.gov/sp/ch/cefcharterschools.asp) (last accessed Dec. 2, 2022).
 
@@ -169,7 +169,7 @@ Addressing housing quality issues also requires community-led and community-cent
 
 [^31]: California Legislative Information, [AB 762- Hazardous emissions and substances: schoolsites: private and charter schools](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB762) (last accessed Dec. 2, 2022); California Legislative Information, [AB 2214- California Environmental Quality Act: schoolsites: acquisition of property: schools districts, charter schools, and private schools](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2214) (last accessed Dec. 2, 2022).
 
-[^32]: California Senate Committee on Appropriations, [AB 2214 Bill Analysis](C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf) (last accessed Dec. 2, 2022).
+[^32]: California Senate Committee on Appropriations, AB 2214 Bill Analysis (last accessed Dec. 2, 2022).
 
 
 {!+ content/extras/gluesolutions.github.io_map_script.html !}

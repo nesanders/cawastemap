@@ -76,17 +76,6 @@ Addressing housing quality issues also requires community-led and community-cent
 
 [^11]: See California Environmental Justice Alliance, [Environmental and Housing Justice Platform] (October 2021).
 
-  [A group of people holding signs Description automatically generated with medium confidence]: media/image1.jpg {width="4.454545056867891in" height="2.409834864391951in"}
-  [1]: media/image2.png {width="1.4415583989501313in" height="1.9512806211723535in"}
-  [2]: media/image3.png {width="4.40625in" height="2.6770833333333335in"}
-  [, *EnviroStor: Report of Permitted Hazardous Waste Facilities in California*]: https://www.envirostor.dtsc.ca.gov/public/report_permitted_public
-  [Fast Facts ]: https://nces.ed.gov/fastfacts/display.asp?id=372
-  [AB 762- Hazardous emissions and substances: schoolsites: private and charter schools]: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202120220AB762
-  [AB 2214- California Environmental Quality Act: schoolsites: acquisition of property: schools districts, charter schools, and private schools]: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202120220AB2214
-  [AB 2214 Bill Analysis]: C://Users/Idalmis%20Vaquero/Downloads/202120220AB2214_Senate%20Appropriations.pdf
-  [, SB 673 Permit Criteria Implementation]: https://dtsc.ca.gov/sb-673-permit-criteria-implementation/
-  [Environmental and Housing Justice Platform]: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https:/calgreenzones.org/wp-content/uploads/2021/10/CEJA_GZ-EHJP-Full-Platform-Final.pdf
-
 
 
 {!+ content/extras/gluesolutions.github.io_map_script.html !}
