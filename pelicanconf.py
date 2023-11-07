@@ -91,9 +91,9 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = True
 # List these in reverse order - first item goes on right
 MENUITEMS = (
-    ('Full Report', '/report.html'),
-    ('Executive Summary', '/exec-summary.html'),
-    ('About', '/'),
+    ('Full Report', '/cawastemap/report.html'),
+    ('Executive Summary', '/cawastemap/exec-summary.html'),
+    ('About', '/cawastemap'),
 )
 
 BULRUSH_SHOW_SUMMARY = True
