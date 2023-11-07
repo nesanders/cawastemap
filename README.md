@@ -7,7 +7,9 @@ This is [Idalmis Vaquero](https://projects.iq.harvard.edu/climatefellowship/peop
 
 This site was built using Pelican, a static site generator, and is hosted from this repository using GitHub Pages.
 
-To run the site locally, clone the repository, create a python virtual environment with the `pip_requirements.txt`, activate that environment, and run `make devserver`.  You can then view the site locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+To run the site locally, clone the repository*, create a python virtual environment with the `pip_requirements.txt`, activate that environment, and run `make devserver`.  You can then view the site locally at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+\* You will also need to clone the pelican plugins submodule like this: `git clone --recursive https://github.com/getpelican/pelican-plugins`
 
 ## Syncing data
 
